@@ -85,3 +85,1305 @@ Processing by PagesController#readmi as HTML
 Completed 200 OK in 130ms (Views: 124.6ms)
 
 
+Started GET "/" for ::1 at 2021-12-25 16:55:15 +0700
+Processing by PostsController#index as HTML
+Started GET "/" for ::1 at 2021-12-25 16:55:22 +0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (40.0ms)
+  Rendered posts/index.html.erb within layouts/application (39.0ms)
+Completed 500 Internal Server Error in 19429ms
+
+
+  
+ActionView::Template::Error (can't replace hash during iteration):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__688737153_11220'
+Completed 200 OK in 24455ms (Views: 2955.8ms)
+
+
+Started GET "/" for ::1 at 2021-12-25 16:55:54 +0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 123ms (Views: 118.8ms)
+
+
+Started GET "/" for ::1 at 2021-12-25 16:55:56 +0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 121ms (Views: 116.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-25 16:55:59 +0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 120ms (Views: 115.5ms)
+
+
+Started GET "/" for ::1 at 2021-12-25 17:24:15 +0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 258ms (Views: 254.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-25 17:24:16 +0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 160ms (Views: 154.9ms)
+
+
+Started GET "/" for ::1 at 2021-12-26 19:22:51 +0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (84.0ms)
+Completed 200 OK in 9860ms (Views: 9045.8ms)
+
+
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Waiting for up to 28.98 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 req:5 conn:1:1 | parsert.insert | STARTED | {"insert"=>"messages", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('61c8a6588782821c8884f4b7'), "url"=>"https://www.avito.ru/krasnoyarsk/mebel_i_interer/bele_postelnoe_novoe_evro_2233407833", "head"=>"", "text"=>"1", "link"=>"", "linksx"=>""...
+MONGODB | localhost:27017 req:5 | parsert.insert | SUCCEEDED | 1.631s
+Started GET "/" for ::1 at 2021-12-27 01:06:45 +0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 3456ms (Views: 1134.5ms | MongoDB: 0.0ms)
+
+
+MONGODB | localhost:27017 req:253 conn:1:1 | parsert.insert | STARTED | {"insert"=>"messages", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('61c8b0088782821c8884f4b8'), "url"=>"https://www.avito.ru/krasnoyarsk/mebel_i_interer/bele_postelnoe_novoe_evro_2233407833", "head"=>"2", "text"=>"", "link"=>"", "linksx"=>""...
+MONGODB | localhost:27017 req:253 | parsert.insert | SUCCEEDED | 0.010s
+Started GET "/" for ::1 at 2021-12-27 02:02:08 +0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1854ms (Views: 1848.9ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:02:15 +0700
+  
+AbstractController::ActionNotFound (The action 'messages' could not be found for PagesController):
+  
+actionpack (5.1.7) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/messages" for ::1 at 2021-12-27 02:04:12 +0700
+  
+AbstractController::ActionNotFound (The action 'messages' could not be found for PagesController):
+  
+actionpack (5.1.7) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/messages" for ::1 at 2021-12-27 02:04:49 +0700
+  
+AbstractController::ActionNotFound (The action 'messages' could not be found for PagesController):
+  
+actionpack (5.1.7) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/messages" for ::1 at 2021-12-27 02:05:39 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+  Rendered messages/messages.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 184ms (Views: 162.1ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:05:53 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+  Rendered messages/messages.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 136ms (Views: 132.0ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:09:09 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 req:5 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:5 | parsert.find | SUCCEEDED | 0.010s
+  Rendered messages/messages.html.erb within layouts/application (371.0ms)
+Completed 200 OK in 507ms (Views: 503.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:09:32 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:8 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:8 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 145ms (Views: 140.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:09:34 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:9 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:9 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 144ms (Views: 139.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:09:35 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:10 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:10 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 144ms (Views: 140.1ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:09:54 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:13 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:13 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 148ms (Views: 143.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:10:17 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:16 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:16 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 155ms (Views: 149.6ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:10:18 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:17 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:17 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 142ms (Views: 137.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:10:20 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:19 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:19 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 144ms (Views: 138.6ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:10:52 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:23 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:23 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 160ms (Views: 140.9ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:10:53 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:24 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:24 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 141ms (Views: 136.5ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:11:25 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:28 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:28 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 150ms (Views: 144.4ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:11:26 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:29 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:29 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 145ms (Views: 140.6ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:11:27 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:30 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:30 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 155ms (Views: 150.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:11:40 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:33 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:33 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 145ms (Views: 140.5ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:12:05 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:36 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:36 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 143ms (Views: 138.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:12:06 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:37 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:37 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 146ms (Views: 140.9ms | MongoDB: 0.0ms)
+
+
+Started GET "/message" for ::1 at 2021-12-27 02:12:09 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/message"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/messages" for ::1 at 2021-12-27 02:12:13 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:39 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:39 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 147ms (Views: 142.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages/messages" for ::1 at 2021-12-27 02:12:20 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/messages/messages"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/messages" for ::1 at 2021-12-27 02:12:36 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:42 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:42 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 159ms (Views: 154.6ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:12:51 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:45 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:45 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 142ms (Views: 138.0ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:12:52 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:46 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:46 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 145ms (Views: 140.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:13:31 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:51 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:51 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 146ms (Views: 141.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:13:32 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:52 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:52 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 145ms (Views: 140.0ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:13:58 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:55 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:55 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 147ms (Views: 142.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:13:59 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:57 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:57 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 144ms (Views: 140.1ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:14:01 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:58 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:58 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 157ms (Views: 152.3ms | MongoDB: 0.0ms)
+
+
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 req:5 conn:1:1 | parsert.insert | STARTED | {"insert"=>"messages", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('61c8bf7987828208f41995a2'), "url"=>"https://www.avito.ru/krasnoyarsk/mebel_i_interer/bele_postelnoe_novoe_evro_2233407833", "head"=>"21", "text"=>"", "link"=>"", "linksx"=>"...
+MONGODB | localhost:27017 req:5 | parsert.insert | SUCCEEDED | 0.070s
+Started GET "/messages" for ::1 at 2021-12-27 02:16:34 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:74 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:74 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 149ms (Views: 144.4ms | MongoDB: 0.0ms)
+
+
+Started GET "/all" for ::1 at 2021-12-27 02:17:49 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/all"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/pages" for ::1 at 2021-12-27 02:18:04 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/pages"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/pages/readmi" for ::1 at 2021-12-27 02:18:12 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/pages/readmi"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/readmi" for ::1 at 2021-12-27 02:18:17 +0700
+Processing by PagesController#readmi as HTML
+  Rendering pages/readmi.html.erb within layouts/application
+  Rendered pages/readmi.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 146ms (Views: 141.4ms | MongoDB: 0.0ms)
+
+
+Started GET "/all" for ::1 at 2021-12-27 02:18:23 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/all"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/messages" for ::1 at 2021-12-27 02:18:36 +0700
+Processing by MessagesController#all as HTML
+Completed 406 Not Acceptable in 412ms (MongoDB: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (MessagesController#all is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.7) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.7) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+mongoid (7.3.3) lib/mongoid/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/messages" for ::1 at 2021-12-27 02:20:58 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:101 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:101 | parsert.find | SUCCEEDED | 0.002s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 171ms (Views: 148.6ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:21:29 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:105 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:105 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 151ms (Views: 145.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:21:30 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:107 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:107 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 156ms (Views: 151.6ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:21:47 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:109 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:109 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 149ms (Views: 144.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:21:49 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:110 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:110 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 174ms (Views: 168.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:22:13 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:114 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:114 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 166ms (Views: 160.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:22:14 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:115 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:115 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 153ms (Views: 147.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:22:32 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:118 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:118 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 148ms (Views: 143.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:22:33 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:119 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:119 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 147ms (Views: 141.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:22:34 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:120 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:120 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 150ms (Views: 145.1ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:22:41 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:122 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:122 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 148ms (Views: 143.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:22:42 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:123 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:123 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 155ms (Views: 150.1ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:24:10 +0700
+  
+ActionController::RoutingError (uninitialized constant MessageController):
+  
+activesupport (5.1.7) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.7) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.7) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.7) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.7) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.7) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.7) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/messages" for ::1 at 2021-12-27 02:24:20 +0700
+  
+AbstractController::ActionNotFound (The action 'messages' could not be found for PagesController):
+  
+actionpack (5.1.7) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/messages" for ::1 at 2021-12-27 02:24:30 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:135 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:135 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 166ms (Views: 145.4ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:25:20 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:141 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:141 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 168ms (Views: 146.0ms | MongoDB: 0.0ms)
+
+
+Started GET "/messages" for ::1 at 2021-12-27 02:25:42 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:144 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:144 | parsert.find | SUCCEEDED | 0.002s
+  Rendered messages/messages.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 28ms (MongoDB: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `head' for nil:NilClass):
+    1: <h3>messages</h3>
+    2: <ul>
+    3: <% @ms.each do |message| %>
+    4: <li><% @message.head %></li>
+    5: <% end %>
+    6: </ul>
+  
+app/views/messages/messages.html.erb:4:in `block in _app_views_messages_messages_html_erb__116069548_32380'
+app/views/messages/messages.html.erb:3:in `_app_views_messages_messages_html_erb__116069548_32380'
+Started GET "/messages" for ::1 at 2021-12-27 02:26:45 +0700
+Processing by MessagesController#messages as HTML
+  Rendering messages/messages.html.erb within layouts/application
+MONGODB | localhost:27017 req:151 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:151 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/messages.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 30ms (MongoDB: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `created_at' for nil:NilClass):
+    1: <h3>messages</h3>
+    2: <ul>
+    3: <% @ms.each do |message| %>
+    4: <li><% @message.created_at %></li>
+    5: <% end %>
+    6: </ul>
+  
+app/views/messages/messages.html.erb:4:in `block in _app_views_messages_messages_html_erb__116069548_33020'
+app/views/messages/messages.html.erb:3:in `_app_views_messages_messages_html_erb__116069548_33020'
+Started GET "/messages" for ::1 at 2021-12-27 02:32:07 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/messages"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/messages" for ::1 at 2021-12-27 02:33:09 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/messages"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/allmessages" for ::1 at 2021-12-27 02:33:25 +0700
+Processing by MessagesController#allmessages as HTML
+  Rendering messages/allmessages.html.erb within layouts/application
+MONGODB | localhost:27017 req:192 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:192 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/allmessages.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 49ms (MongoDB: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `created_at' for nil:NilClass):
+    1: <h3>messages</h3>
+    2: <ul>
+    3: <% @ms.each do |message| %>
+    4: <li><% @message.created_at %></li>
+    5: <% end %>
+    6: </ul>
+  
+app/views/messages/allmessages.html.erb:4:in `block in _app_views_messages_allmessages_html_erb__792267191_37140'
+app/views/messages/allmessages.html.erb:3:in `_app_views_messages_allmessages_html_erb__792267191_37140'
+Started GET "/allmessages" for ::1 at 2021-12-27 02:34:25 +0700
+Processing by MessagesController#allmessages as HTML
+  Rendering messages/allmessages.html.erb within layouts/application
+  Rendered messages/allmessages.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 18ms (MongoDB: 0.0ms)
+
+
+  
+SyntaxError (c:/ruby/parsert/app/views/messages/allmessages.html.erb:8: syntax error, unexpected `ensure', expecting end-of-input
+          ensure
+          ^~~~~~
+):
+  
+app/views/messages/allmessages.html.erb:8: syntax error, unexpected `ensure', expecting end-of-input
+Started GET "/allmessages" for ::1 at 2021-12-27 02:37:03 +0700
+Processing by MessagesController#allmessages as HTML
+  Rendering messages/allmessages.html.erb within layouts/application
+  Rendered messages/allmessages.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 174ms (Views: 168.5ms | MongoDB: 0.0ms)
+
+
+Started GET "/allmessages" for ::1 at 2021-12-27 02:38:34 +0700
+Processing by MessagesController#allmessages as HTML
+  Rendering messages/allmessages.html.erb within layouts/application
+  Rendered messages/allmessages.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 149ms (Views: 144.4ms | MongoDB: 0.0ms)
+
+
+Started GET "/allmessages" for ::1 at 2021-12-27 02:39:28 +0700
+Processing by MessagesController#allmessages as HTML
+  Rendering messages/allmessages.html.erb within layouts/application
+  Rendered messages/allmessages.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 148ms (Views: 141.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/allmessages" for ::1 at 2021-12-27 02:41:08 +0700
+Processing by MessagesController#allmessages as HTML
+  Rendering messages/allmessages.html.erb within layouts/application
+  Rendered messages/allmessages.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 142ms (Views: 137.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/allmessages" for ::1 at 2021-12-27 02:42:01 +0700
+Processing by MessagesController#allmessages as HTML
+  Rendering messages/allmessages.html.erb within layouts/application
+  Rendered messages/allmessages.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 19ms (MongoDB: 0.0ms)
+
+
+  
+SyntaxError (c:/ruby/parsert/app/views/messages/allmessages.html.erb:10: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/views/messages/allmessages.html.erb:10: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/allmessages" for ::1 at 2021-12-27 02:42:19 +0700
+Processing by MessagesController#allmessages as HTML
+  Rendering messages/allmessages.html.erb within layouts/application
+MONGODB | localhost:27017 req:246 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:246 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/allmessages.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 154ms (Views: 149.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/allmessages" for ::1 at 2021-12-27 02:42:33 +0700
+Processing by MessagesController#allmessages as HTML
+  Rendering messages/allmessages.html.erb within layouts/application
+MONGODB | localhost:27017 req:249 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:249 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/allmessages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 148ms (Views: 143.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/allmessages" for ::1 at 2021-12-27 02:42:34 +0700
+Processing by MessagesController#allmessages as HTML
+  Rendering messages/allmessages.html.erb within layouts/application
+MONGODB | localhost:27017 req:250 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:250 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/allmessages.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 153ms (Views: 147.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/allmessages" for ::1 at 2021-12-27 02:42:35 +0700
+Processing by MessagesController#allmessages as HTML
+  Rendering messages/allmessages.html.erb within layouts/application
+MONGODB | localhost:27017 req:251 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:251 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/allmessages.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 159ms (Views: 154.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/allmessages" for ::1 at 2021-12-27 02:42:43 +0700
+Processing by MessagesController#allmessages as HTML
+  Rendering messages/allmessages.html.erb within layouts/application
+MONGODB | localhost:27017 req:253 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:253 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/allmessages.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 149ms (Views: 144.1ms | MongoDB: 0.0ms)
+
+
+Started GET "/allmessages" for ::1 at 2021-12-27 02:42:44 +0700
+Processing by MessagesController#allmessages as HTML
+  Rendering messages/allmessages.html.erb within layouts/application
+MONGODB | localhost:27017 req:254 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:254 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/allmessages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 148ms (Views: 143.5ms | MongoDB: 0.0ms)
+
+
+Started GET "/allmessages" for ::1 at 2021-12-27 02:42:53 +0700
+Processing by MessagesController#allmessages as HTML
+  Rendering messages/allmessages.html.erb within layouts/application
+  Rendered messages/allmessages.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 16ms (MongoDB: 0.0ms)
+
+
+  
+SyntaxError (c:/ruby/parsert/app/views/messages/allmessages.html.erb:5: syntax error, unexpected `end'
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                            ^~~
+c:/ruby/parsert/app/views/messages/allmessages.html.erb:9: syntax error, unexpected `ensure', expecting ')'
+          ensure
+          ^~~~~~
+c:/ruby/parsert/app/views/messages/allmessages.html.erb:11: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+):
+  
+app/views/messages/allmessages.html.erb:5: syntax error, unexpected `end'
+app/views/messages/allmessages.html.erb:9: syntax error, unexpected `ensure', expecting ')'
+app/views/messages/allmessages.html.erb:11: syntax error, unexpected `end', expecting ')'
+Started GET "/allmessages" for ::1 at 2021-12-27 02:43:04 +0700
+Processing by MessagesController#allmessages as HTML
+  Rendering messages/allmessages.html.erb within layouts/application
+MONGODB | localhost:27017 req:257 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:257 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/allmessages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 159ms (Views: 154.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/allmessages" for ::1 at 2021-12-27 02:43:05 +0700
+Processing by MessagesController#allmessages as HTML
+  Rendering messages/allmessages.html.erb within layouts/application
+MONGODB | localhost:27017 req:258 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:258 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/allmessages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 148ms (Views: 142.4ms | MongoDB: 0.0ms)
+
+
+Started GET "/allmessages" for ::1 at 2021-12-27 02:43:06 +0700
+Processing by MessagesController#allmessages as HTML
+  Rendering messages/allmessages.html.erb within layouts/application
+MONGODB | localhost:27017 req:259 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:259 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/allmessages.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 148ms (Views: 143.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/allmessages" for ::1 at 2021-12-27 02:43:07 +0700
+Processing by MessagesController#allmessages as HTML
+  Rendering messages/allmessages.html.erb within layouts/application
+MONGODB | localhost:27017 req:260 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x16220 type=uuid data=0xfff5933811b74ea7...>}}
+MONGODB | localhost:27017 req:260 | parsert.find | SUCCEEDED | 0.001s
+  Rendered messages/allmessages.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 148ms (Views: 142.7ms | MongoDB: 0.0ms)
+
+
