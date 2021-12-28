@@ -1,0 +1,77 @@
+<h3>Добавить объявление в ручную</h3>
+<%= form_for :addmessage, url: messages_path do |f| %>   <!--название формы, url куда перейти-->
+
+<p>
+Сылка на объявление<br/>   
+<%= f.text_field :url %>
+</p>
+
+<p>
+Заголовок<br/>   
+<%= f.text_field :head %>
+</p>
+
+<p>
+Цена<br/>   
+<%= f.text_field :pr %>
+</p>
+
+<p>
+Текс объявления<br/>   
+<%= f.text_field :text %>
+</p>
+
+
+<p>
+Сылка<br/>   
+<%= f.text_field :link %>
+</p>
+
+
+<p>
+Сылка на схему<br/>   
+<%= f.text_field :linksx %>
+</p>
+
+<p>
+Словарь<br/>   
+<%= f.text_field :dictionary %>
+</p>
+
+
+<p>
+Сылка на фото<br/>   
+<%= f.text_field :photo %>
+</p>
+
+
+<p>
+Телефон<br/>   
+<%= f.text_field :phone %>
+</p>
+
+
+<p>
+Сылка на профиль<br/>   
+<%= f.text_field :profile %>
+</p>
+
+<p>
+Сылка на профиль<br/>   
+<%= f.submit %>
+</p>
+
+<% end %>
+
+<!--
+url:"https://www.avito.ru/krasnoyarsk/mebel_i_interer/bele_postelnoe_novoe_evro_2233407833"
+head:"",
+pr:1000,
+text:""
+link:"",
+linksx:"",
+dictionary:"",
+photo:"https://69.img.avito.st/640x480/11936710869.jpg",
+phone:"",
+profile:"https://www.avito.ru/user/abaf7f654cda1aa84aecc195eee0f212/profile?id=2233407833&src=item&page_from=from_item_card&iid=2233407833
+-->

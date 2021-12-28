@@ -1,8 +1,9 @@
 class Message
   include Mongoid::Document
-  include Mongoid::Timestamps
+  include Mongoid::Timestamps 
   field :url, type: String
   field :head, type: String
+  field :pr, type: Integer
   field :text, type: String
   field :link, type: String
   field :linksx, type: String
