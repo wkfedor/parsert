@@ -1,2 +1,27 @@
 <h3>Главная страница</h3>
 <h3>Выводим статистику по всей системе..</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Заголовок</th>
+      <th>Ссылка</th>
+      <th>Текст</th>
+      <th>Цена</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+
+
+<%  @ms.each do |m| %>
+
+    <tr>
+      <th scope="row"><%= m.head %></th>
+      <td><%= m.url %></td>
+      <td><%= m.text %></td>
+      <td><%= m.pr %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
