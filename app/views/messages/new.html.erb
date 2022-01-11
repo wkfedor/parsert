@@ -1,5 +1,12 @@
-<h3>Добавить объявление в ручную</h3>
+
 <%= form_for :addmessage, url: messages_path do |f| %>   <!--название формы, url куда перейти-->
+
+
+<div class="container-fluid d-flex h-100 justify-content-center align-items-center p-0">
+<div class="row bg-white shadow-sm">
+<div class="col border rounded p-4">
+
+  <h3>Добавить объявление в ручную</h3>
 
 <p>
 Сылка на объявление<br/>   
@@ -23,14 +30,16 @@
 
 
 <p>
-Сылка<br/>   
+Сылка на проект<br/>
 <%= f.text_field :link %>
 </p>
 
 
+
+
 <p>
-Сылка на схему<br/>   
-<%= f.text_field :linksx %>
+Сылка на схему(неактино)<br/>
+<%= f.text_field :linksx, :readonly => true  %>
 </p>
 
 <p>
@@ -57,11 +66,17 @@
 </p>
 
 <p>
-Сылка на профиль<br/>   
-<%= f.submit %>
+
+<%= f.submit "Отправить" %>
 </p>
 
+</div>
+</div>
+</div>
+
 <% end %>
+
+
 
 <!--
 url:"https://www.avito.ru/krasnoyarsk/mebel_i_interer/bele_postelnoe_novoe_evro_2233407833"
