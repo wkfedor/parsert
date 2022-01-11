@@ -1,0 +1,7 @@
+<h3>messages</h3>
+<% @msql.as_json.each  do  |a, b| %>
+index=<%= a %><br/>
+val=<%= b %><br/>
+msql[a]=<%=@msql[a] %><br/>
+<br/><br/>
+<% end %>
