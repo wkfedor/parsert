@@ -1,1 +1,22 @@
-<h3>dictionars</h3>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Вес</th>
+      <th>Текст</th>
+      <th>Примечание</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+
+
+      <%  @msql.each do |m| %>
+
+      <tr>
+        <th scope="row"><%= m.ves %></th>
+        <td><%= m.word %></td>
+        <td><%= m.comment %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>

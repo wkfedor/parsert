@@ -17,7 +17,7 @@ class MessagesController < ApplicationController
        #@mas=Array.new
 
        #@msql.as_json.each  do  |a, b|
-       #@mas.push(a) 
+       #@mas.push(a) ictionar.find_by(_id:params[:id])
        #end  
        #render plain: @msql["created_at"].inspect
        #render plain: @msql["_id"]

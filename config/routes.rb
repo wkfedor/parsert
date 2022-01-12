@@ -4,7 +4,8 @@ get 'readmi'=>'pages#readmi'
 get 'allmessages'=>'messages#allmessages'
 
 
-get 'dictionars'=>'dictionars#'
+get 'dictionars'=>'dictionars#index'
+get 'dictionars/index'=>'dictionars#index'
 
 
 resources :messages
