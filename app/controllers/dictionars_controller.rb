@@ -19,7 +19,7 @@ class DictionarsController < ApplicationController
         #render plain: params[:addmessage].inspect
         @temp=Dictionar.new(dictionar_params)
         @temp.save
-        redirect_to action: :index2   # в место action: не понял что это, инициализировать новый запрос к браузеру, а какие еще бывают?  :index вьюха?
+        redirect_to action: :index   # в место action: не понял что это, инициализировать новый запрос к браузеру, а какие еще бывают?  :index вьюха?
     end
 
     private def dictionar_params

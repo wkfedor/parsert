@@ -44,3 +44,103 @@ Things you may want to cover:
 
 # !!!! у каждого объявления выводить его рейтинг и словестный рейтинг
 
+/* 1 */
+{
+    "_id" : ObjectId("61de8e938040180b24f74142"),
+    "ves" : -30,
+    "word" : "цена от",
+    "comment" : "скорее всего магазин",
+    "updated_at" : ISODate("2022-01-12T08:17:23.499Z"),
+    "created_at" : ISODate("2022-01-12T08:17:23.499Z")
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("61dea70a8040180b24f74143"),
+    "ves" : -30,
+    "word" : "доставка по красноярску",
+    "comment" : "скорее всего магазин",
+    "updated_at" : ISODate("2022-01-12T10:01:46.422Z"),
+    "created_at" : ISODate("2022-01-12T10:01:46.422Z")
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("61deab6d8040180b24f7414d"),
+    "ves" : -30,
+    "word" : "цену уточняйте",
+    "comment" : "заманушная цена",
+    "updated_at" : ISODate("2022-01-12T10:20:29.284Z"),
+    "created_at" : ISODate("2022-01-12T10:20:29.284Z")
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("61dff54580401845a10071c6"),
+    "ves" : 10,
+    "word" : "200*220",
+    "comment" : "тчн",
+    "updated_at" : ISODate("2022-01-13T09:47:49.747Z"),
+    "created_at" : ISODate("2022-01-13T09:47:49.747Z")
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("61dff58380401845a10071c7"),
+    "ves" : 10,
+    "word" : "220*240",
+    "comment" : "тчн",
+    "updated_at" : ISODate("2022-01-13T09:48:51.982Z"),
+    "created_at" : ISODate("2022-01-13T09:48:51.982Z")
+}
+
+
+
+
+
+
+
+/* 1 */
+{
+    "_id" : ObjectId("61dd3a2980401829b6a749c2"),
+    "url" : "1",
+    "head" : "2",
+    "pr" : 3,
+    "text" : "4",
+    "link" : "5",
+    "linksx" : "6",
+    "dictionary" : "7",
+    "photo" : "78",
+    "phone" : "8",
+    "updated_at" : ISODate("2022-01-11T08:04:57.329Z"),
+    "created_at" : ISODate("2022-01-11T08:04:57.329Z")
+}
+
+
+
+
+
+
+
+
+
+/* 1 */
+{
+    "_id" : ObjectId("61de8e938040180b24f74142"),
+    "name" : "Первый проект",
+    "dictionars" : [ 
+        {
+            "_id" : ObjectId("61de8e938040180b24f74141")
+        }, 
+        {
+            "_id" : ObjectId("61dea70a8040180b24f74143")
+        }, 
+        {
+            "_id" : ObjectId("61deab6d8040180b24f7414d")
+        }
+    ],
+    "updated_at" : ISODate("2022-01-12T08:17:23.499Z"),
+    "created_at" : ISODate("2022-01-12T08:17:23.499Z")
+}
+
+

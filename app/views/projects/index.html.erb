@@ -1,0 +1,46 @@
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Текст</th>
+      <th>ID</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+
+      <%=  @msql.inspect  %>
+
+
+      <%  @msql.each do |m| %>
+
+      <tr>
+        <th scope="row"><%= m.name %></th>
+        <td>
+            <%= m.inspect %>
+          <br/><br/><br/><br/>
+
+          <% m.dictionars.each do |a|  %>
+            <%= a["_id"] %><br/>
+
+            <% @msqld.each do |b|%>
+
+              <% if b.id == a["_id"] %>
+                <%= b.ves %>
+                <%= b.word %>
+                <%= b.comment %>
+              <% end %>
+
+            <% end %>
+
+          <% end %>
+
+
+
+
+
+
+            </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
