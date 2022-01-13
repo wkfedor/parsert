@@ -8,7 +8,11 @@
     <tbody>
     <tr>
 
+<<<<<<< HEAD
       <%  @msql.inspect  %>
+=======
+      <%=  @msql.inspect  %>
+>>>>>>> 8f04a07fba15f99fea3424aea17a60cdb3831566
 
 
       <%  @msql.each do |m| %>
@@ -16,19 +20,33 @@
       <tr>
         <th scope="row"><%= m.name %></th>
         <td>
+<<<<<<< HEAD
             <% m.inspect %>
           
 
           <% m.dictionars.each do |a|  %>
             <% a["_id"] %>
+=======
+            <%= m.inspect %>
+          <br/><br/><br/><br/>
+
+          <% m.dictionars.each do |a|  %>
+            <%= a["_id"] %><br/>
+>>>>>>> 8f04a07fba15f99fea3424aea17a60cdb3831566
 
             <% @msqld.each do |b|%>
 
               <% if b.id == a["_id"] %>
+<<<<<<< HEAD
                 <span class="border border-primary"><%= b.ves %></span>
                 <span class="border border-success"><%= b.word %></span>
                 <span class="border border-info"><%= b.comment %></span>
                 <br/>
+=======
+                <%= b.ves %>
+                <%= b.word %>
+                <%= b.comment %>
+>>>>>>> 8f04a07fba15f99fea3424aea17a60cdb3831566
               <% end %>
 
             <% end %>
