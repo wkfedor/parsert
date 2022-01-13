@@ -8,12 +8,16 @@
     <tbody>
     <tr>
 
+      <%  @msql.inspect  %>
+
+
       <%  @msql.each do |m| %>
 
       <tr>
         <th scope="row"><%= m.name %></th>
         <td>
             <% m.inspect %>
+          
 
           <% m.dictionars.each do |a|  %>
             <% a["_id"] %>
