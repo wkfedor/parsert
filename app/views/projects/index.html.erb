@@ -8,7 +8,7 @@
     <tbody>
     <tr>
 
-      <%=  @msql.inspect  %>
+      <%  @msql.inspect  %>
 
 
       <%  @msql.each do |m| %>
@@ -16,18 +16,19 @@
       <tr>
         <th scope="row"><%= m.name %></th>
         <td>
-            <%= m.inspect %>
-          <br/><br/><br/><br/>
+            <% m.inspect %>
+          
 
           <% m.dictionars.each do |a|  %>
-            <%= a["_id"] %><br/>
+            <% a["_id"] %>
 
             <% @msqld.each do |b|%>
 
               <% if b.id == a["_id"] %>
-                <%= b.ves %>
-                <%= b.word %>
-                <%= b.comment %>
+                <span class="border border-primary"><%= b.ves %></span>
+                <span class="border border-success"><%= b.word %></span>
+                <span class="border border-info"><%= b.comment %></span>
+                <br/>
               <% end %>
 
             <% end %>
