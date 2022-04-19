@@ -47,6 +47,15 @@ Things you may want to cover:
 # git config --global user.email your@email.com  
 # локальная почта должна быть как в гите, тогда видно вклады
 
+
+#добавляем данные словарей в проект так!  
+#1 варинт
+#https://www.youtube.com/watch?v=m1ZWfOAwyxc
+#https://webformyself.com/peretaskivanie-elementov-s-vanilla-js-i-html/
+#2 вариант !!!!
+# https://itchief.ru/javascript/jquery-add-delete-elements#move
+#https://itchief.ru/examples/lab.php?topic=jquery&file=manipulation-example-18
+#3 ищи еще аналогов
 /* 1 */
 {
     "_id" : ObjectId("61de8e938040180b24f74142"),

@@ -8,7 +8,10 @@ class ProjectsController < ApplicationController
      #render plain: Project.find_by(_id:params)
 
     #db.projects.find({_id:ObjectId("61de8e938040180b24f74142")})
-
-
   end
+
+  def edit
+    @project=Project.find_by(_id:params[:id])
+  end
+
 end

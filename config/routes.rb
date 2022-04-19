@@ -12,6 +12,7 @@ get 'projects/index'=>'projects#index'
 
 resources :messages
 resources :dictionars
+resources :projects
 # rake routes показать все url адреса которые отслеживаем
 
 end

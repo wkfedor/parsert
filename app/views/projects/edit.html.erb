@@ -1,0 +1,73 @@
+<h3>Изменить проект</h3>
+
+<%= form_for @project, url: project_path(@project), method: :patch do |f| %>   <!--название формы, url куда перейти-->
+
+
+  <div class="container-fluid d-flex h-100 justify-content-center align-items-center p-0">
+    <div class="row bg-white shadow-sm">
+      <div class="col border rounded p-4">
+
+        <h3>Изменить проект</h3>
+
+        <p>
+          Имя<br/>
+          <%= f.text_field :name  %>
+        </p>
+
+
+        <div class="example-parent">
+
+          <div class="example-origin">
+
+            <div
+              id="draggable-1"
+              class="example-draggable"
+              draggable="true"
+              ondragstart="onDragStart(event);"
+            >
+              thing 1
+            </div>
+            <div
+              id="draggable-2"
+              class="example-draggable"
+              draggable="true"
+              ondragstart="onDragStart(event);"
+            >
+              thing 2
+            </div>
+            <div
+              id="draggable-3"
+              class="example-draggable"
+              draggable="true"
+              ondragstart="onDragStart(event);"
+            >
+              thing 3
+            </div>
+            <div
+              id="draggable-4"
+              class="example-draggable"
+              draggable="true"
+              ondragstart="onDragStart(event);"
+            >
+              thing 4
+            </div>
+          </div>
+
+          <div
+            class="example-dropzone"
+            ondragover="onDragOver(event);"
+            ondrop="onDrop(event);"
+          >
+
+          </div>
+        </div>
+
+
+        <%= f.submit "Отправить" %>
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+<% end %>

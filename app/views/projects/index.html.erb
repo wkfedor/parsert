@@ -3,6 +3,9 @@
     <tr>
       <th>Текст</th>
       <th>ID</th>
+      <th>Подробно</th>
+      <th>Изменить</th>
+      <th>Удалить</th>
     </tr>
     </thead>
     <tbody>
@@ -30,17 +33,14 @@
                 <span class="border border-info"><%= b.comment %></span>
                 <br/>
               <% end %>
-
             <% end %>
-
           <% end %>
+        </td>
 
+        <td></td>
+        <td>   <%= link_to "Редактировать", edit_project_path(m) %></td>
+        <td></td>
 
-
-
-
-
-            </td>
       </tr>
     <% end %>
     </tbody>
