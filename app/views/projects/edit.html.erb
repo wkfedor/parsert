@@ -14,54 +14,19 @@
           <%= f.text_field :name  %>
         </p>
 
+  <div style="margin: 50px;">
+    <div class="content-1">
+      <p>Контент 1...</p>
+              <button type="button"  id="move1">Переместить кнопку в другое место1</button>
+              <button type="button"  id="move2">Переместить кнопку в другое место2</button>        
+              <button type="button"  id="move3">Переместить кнопку в другое место3</button>
 
-        <div class="example-parent">
-
-          <div class="example-origin">
-
-            <div
-              id="draggable-1"
-              class="example-draggable"
-              draggable="true"
-              ondragstart="onDragStart(event);"
-            >
-              thing 1
-            </div>
-            <div
-              id="draggable-2"
-              class="example-draggable"
-              draggable="true"
-              ondragstart="onDragStart(event);"
-            >
-              thing 2
-            </div>
-            <div
-              id="draggable-3"
-              class="example-draggable"
-              draggable="true"
-              ondragstart="onDragStart(event);"
-            >
-              thing 3
-            </div>
-            <div
-              id="draggable-4"
-              class="example-draggable"
-              draggable="true"
-              ondragstart="onDragStart(event);"
-            >
-              thing 4
-            </div>
-          </div>
-
-          <div
-            class="example-dropzone"
-            ondragover="onDragOver(event);"
-            ondrop="onDrop(event);"
-          >
-
-          </div>
-        </div>
-
+        
+    </div>
+    <div class="content-2">
+      <p>Контент 2...</p>
+    </div>
+  </div>
 
         <%= f.submit "Отправить" %>
         </p>
