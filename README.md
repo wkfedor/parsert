@@ -43,6 +43,9 @@ Things you may want to cover:
 # 0 на резинке?
 
 # !!!! у каждого объявления выводить его рейтинг и словестный рейтинг
+# git config user.email your@email.com
+# git config --global user.email your@email.com  
+# локальная почта должна быть как в гите, тогда видно вклады
 
 /* 1 */
 {
