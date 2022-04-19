@@ -7,6 +7,7 @@ get 'allmessages'=>'messages#allmessages'
 get 'dictionars'=>'dictionars#index'
 get 'dictionars/index'=>'dictionars#index'
 
+
 get 'projects/index'=>'projects#index'
 
 resources :messages

@@ -15,6 +15,25 @@ class DictionarsController < ApplicationController
 
     end
 
+    def update
+        @msql=Dictionar.find_by(_id:params[:id])
+        @msql.update(dictionar_params)
+        redirect_to action: :index   # в место action: не понял что это, инициализировать новый запрос к браузеру, а какие еще бывают?  :index вьюха?
+    end
+
+    def destroy
+        @msql=Dictionar.find_by(_id:params[:id])
+        @msql.delete
+        redirect_to action: :index
+    end
+
+
+
+    def edit
+    @msql=Dictionar.find_by(_id:params[:id])
+    end
+
+
     def create
         #render plain: params[:addmessage].inspect
         @temp=Dictionar.new(dictionar_params)
@@ -23,6 +42,6 @@ class DictionarsController < ApplicationController
     end
 
     private def dictionar_params
-    params.require(:adddictionar).permit(:ves, :word, :comment)
+    params.require(:dictionar).permit(:ves, :word, :comment)
     end    
 end

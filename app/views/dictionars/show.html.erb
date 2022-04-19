@@ -1,7 +1,11 @@
-<h3>messages</h3>
-<% @msql.as_json.each  do  |a, b| %>
-index=<%= a %><br/>
-val=<%= b %><br/>
-msql[a]=<%=@msql[a] %><br/>
-<br/><br/>
-<% end %>
+<h3>подробнее словарь</h3>
+
+<table class="table table-bordered">
+
+   <tr><td>id</td><td><%=@msql['_id'] %></td></tr>
+   <tr><td>Комментарий</td><td><%=@msql['comment'] %></td></tr>
+   <tr><td>Вес</td><td><%=@msql['ves'] %></td></tr>
+   <tr><td>Фраза для поиска</td><td><%=@msql['word'] %></td></tr>
+
+</table>
+

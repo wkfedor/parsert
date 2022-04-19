@@ -4,6 +4,9 @@
       <th>Вес</th>
       <th>Текст</th>
       <th>Примечание</th>
+      <th>Подробно</th>
+      <th>Изменить</th>
+      <th>Удалить</th>
     </tr>
     </thead>
     <tbody>
@@ -16,6 +19,13 @@
         <th scope="row"><%= m.ves %></th>
         <td><%= m.word %></td>
         <td><%= m.comment %></td>
+        <td><a href=dictionars/<%= m.id %>>Подробнее</a></td>
+        <td>
+          <%= link_to "Редактировать", edit_dictionar_path(m) %>
+        </td>
+        <td>
+          <%= link_to "Удалить", dictionar_path(m), method: :delete %>
+        </td>
       </tr>
     <% end %>
     </tbody>
