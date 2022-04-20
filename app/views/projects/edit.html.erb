@@ -23,15 +23,25 @@
 
 <% end %>
 
+
+
 <div style="margin: 50px;">
   <div class="content-1">
-    <p>Контент 1...</p>
-    <button id="move1">Переместить кнопку в другое место1</button>
-    <button id="move2">Переместить кнопку в другое место2</button>
-    <button id="move3">Переместить кнопку в другое место3</button>
+    <p>Словари в работе</p>
+
+<% @project.dictionars.each do |x| %>
+<button id=<%= "move_#{x["_id"]}"%>> </button>
+<% end %>
+
+
   </div>
   <div class="content-2">
-    <p>Контент 2...</p>
+    <p>Все словари</p>
+
+<% @msqld.each do |x| %>
+<button id=<%= "move_#{x.id}"%>>  <%= x.comment %>||<%= x.ves %>||<%= x.word %></button>
+<% end %>
+
   </div>
 </div>
 

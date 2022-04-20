@@ -11,6 +11,7 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+    @msqld=Dictionar.all
     @project=Project.find_by(_id:params[:id])
   end
 
