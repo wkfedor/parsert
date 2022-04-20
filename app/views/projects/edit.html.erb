@@ -14,20 +14,6 @@
           <%= f.text_field :name  %>
         </p>
 
-  <div style="margin: 50px;">
-    <div class="content-1">
-      <p>Контент 1...</p>
-              <button type="button"  id="move1">Переместить кнопку в другое место1</button>
-              <button type="button"  id="move2">Переместить кнопку в другое место2</button>        
-              <button type="button"  id="move3">Переместить кнопку в другое место3</button>
-
-        
-    </div>
-    <div class="content-2">
-      <p>Контент 2...</p>
-    </div>
-  </div>
-
         <%= f.submit "Отправить" %>
         </p>
 
@@ -36,3 +22,36 @@
   </div>
 
 <% end %>
+
+<div style="margin: 50px;">
+  <div class="content-1">
+    <p>Контент 1...</p>
+    <button id="move1">Переместить кнопку в другое место1</button>
+    <button id="move2">Переместить кнопку в другое место2</button>
+    <button id="move3">Переместить кнопку в другое место3</button>
+  </div>
+  <div class="content-2">
+    <p>Контент 2...</p>
+  </div>
+</div>
+
+
+<script>
+
+   // $(document).ready(function(){ alert('Ваша версия jQuery ' + jQuery.fn.jquery); });
+
+
+
+
+   $("button[id*='move']").each(function (i, el) {
+       $(el).click(function () {
+
+           if ($(this).parent().hasClass('content-1')) {
+               $(this).detach().appendTo('.content-2');
+           } else {
+               $(this).detach().appendTo('.content-1');
+           }
+       });
+   });
+</script>
+

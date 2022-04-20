@@ -15,14 +15,3 @@
 //= require_tree .
 //= require jquery
 //= require jquery_ujs
-
-$("button[id*='move']").each(function (i, el) {
-    $(el).click(function () {
-
-        if ($(this).parent().hasClass('content-1')) {
-            $(this).detach().appendTo('.content-2');
-        } else {
-            $(this).detach().appendTo('.content-1');
-        }
-    });
-});
