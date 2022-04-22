@@ -1,23 +1,16 @@
 <h3>Изменить проект</h3>
-
 <%= form_for @project, url: project_path(@project), method: :patch do |f| %>   <!--название формы, url куда перейти-->
-
-
   <div class="container-fluid d-flex h-100 justify-content-center align-items-center p-0">
     <div class="row bg-white shadow-sm">
       <div class="col border rounded p-4">
 
         <h3>Изменить проект</h3>
-
         <p>
           Имя<br/>
           <%= f.text_field :name  %>
         </p>
-
         <%= f.submit "Отправить" %>
         </p>
-
-
         <div style="margin: 50px;">
           <div class="content-1">
             <p>Словари в работе</p>
@@ -31,18 +24,10 @@
         </div>
 
 
-
       </div>
     </div>
   </div>
-
 <% end %>
-
-
-
-
-
-
 <div style="margin: 50px;">
   <div class="content-2">
     <p>Все словари</p>
@@ -56,15 +41,7 @@
     <% end %>
   </div>
 </div>
-
-
 <script>
-
-   // $(document).ready(function(){ alert('Ваша версия jQuery ' + jQuery.fn.jquery); });
-
-
-
-
    $("button[id*='move']").each(function (i, el) {
        $(el).click(function () {
 
@@ -78,9 +55,5 @@
            }
        });
    });
-
-
-
-
 </script>
 

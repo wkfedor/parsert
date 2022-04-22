@@ -6,6 +6,6 @@ class Project
   field :name, type: String
   field :dictionars, type: Array
   #has_and_belongs_to_many :dictionars
-
+  has_many :dictionar
 end
 

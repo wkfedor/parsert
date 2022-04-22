@@ -5,4 +5,5 @@ class Dictionar
   field :word, type: String
   field :comment, type: String
   #has_and_belongs_to_many :projects
+  belongs_to :project
 end
