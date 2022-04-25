@@ -42,10 +42,17 @@ class ProjectsController < ApplicationController
 
 
   def create
-    @temp=Project.new({"name"=>"111","dictionars"=>[{"_id"=>"61de8e938040180b24f74142"},{"_id"=>"61dea70a8040180b24f74143"}]})
-    #puts "------------------------"
-    #puts  "project_params="
-    #puts  project_params.inspect
+    #@temp=Project.new({"name"=>"111","dictionars"=>[{"_id"=>"61de8e938040180b24f74142"},{"_id"=>"61dea70a8040180b24f74143"}]})
+    @temp={}
+    @temp["dictionars"]=[]
+    project_params2.each do |x|
+      #@temp["dictionars"] <<  {"_id"=>"ObjectId(\"#{x}\")"}
+       @temp["dictionars"] << {:_id => BSON::ObjectId("#{x}")}
+    end
+    @temp["name"]=project_params["name"]
+    #render plain: @temp   # вывести содержимое на экран не используя вьюху
+
+    @temp=Project.new(@temp)
     @temp.save
   end
 
@@ -57,6 +64,13 @@ class ProjectsController < ApplicationController
   end
 
   def new
+=begin
+    @temp={}
+    @temp["name"]=1000
+    @temp["dictionars"]=[]
+    @temp["dictionars"] << {"_id"=>"61de8e938040180b24f74142"}
+    @temp["dictionars"] << {"_id"=>"61de8e938040180b24f74141"}
+=end
     @msqld=Dictionar.all
   end
 
@@ -69,7 +83,7 @@ class ProjectsController < ApplicationController
   end
 
   private def project_params2
-    params.require(:dictionars).permit(:body)
+    params.require(:dictionars)
   end
 
 end

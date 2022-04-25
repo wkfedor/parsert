@@ -2,46 +2,55 @@
 <%= form_for :project, url: projects_path do |f| %>
 
 
-  <div class="container-fluid d-flex h-100 justify-content-center align-items-center p-0">
-    <div class="row bg-white shadow-sm">
-      <div class="col border rounded p-4">
+  <br/>
 
+    <div class="container-fluid d-flex h-100 justify-content-center align-items-center p-0">
+      <div class="row bg-white shadow-sm">
+        <div class="col border rounded p-4">
 
-      Имя<br/>
-  <%= f.text_field :name  %>
-  </p>
-  <%= f.submit "Отправить" %>
-        <div style="margin: 50px;">
-          <div class="content-1">
-            <p>Словари в работе</p>
+          <h3>Изменить проект</h3>
+          <p>
+            Имя<br/>
+            <%= f.text_field :name  %>
+          </p>
+          <%= f.submit "Отправить" %>
+          </p>
+          <div style="margin: 50px;">
+            <div class="content-1">
+              <p>Словари в работе</p>
+
+            </div>
           </div>
+
+
         </div>
-  <%end%>
-<div style="margin: 50px;">
-  <div class="content-2">
-    <p>Все словари</p>
-    <% @msqld.each do |x| %>
-        <button type="button" id=<%= "move_#{x.id}"%> name=<%= "#{x.id}"%> >  <%= x.comment %>||<%= x.ves %>||<%= x.word %></button>
-        <input type="hidden" id=<%= "#{x.id}"%>  name=dictionars[<%= "#{x.id}"%>] value=<%= "#{x.id}"%>>
-    <% end %>
+      </div>
+    </div>
+  <% end %>
+  <div style="margin: 50px;">
+    <div class="content-2">
+      <p>Все словари</p>
+      <% @msqld.each do |x| %>
+
+          <button type="button" id=<%= "move_#{x.id}"%> name=<%= "#{x.id}"%> >  <%= x.comment %>||<%= x.ves %>||<%= x.word %></button>
+          <input type="hidden" id=<%= "#{x.id}"%>  name=dictionars[] value=<%= "#{x.id}"%>>
+
+
+      <% end %>
+    </div>
   </div>
-</div>
-<script>
-    $("button[id*='move']").each(function (i, el) {
-        $(el).click(function () {
+  <script>
+      $("button[id*='move']").each(function (i, el) {
+          $(el).click(function () {
 
-            if ($(this).parent().hasClass('content-1')) {
-                //alert(el.name)
-                $(this).detach().appendTo('.content-2');
-                $('#'+el.name).detach().appendTo('.content-2');
-            } else {
-                $(this).detach().appendTo('.content-1');
-                $('#'+el.name).detach().appendTo('.content-1');
-            }
-        });
-    });
-</script>
-
-</div>
-</div>
-</div>
+              if ($(this).parent().hasClass('content-1')) {
+                  //alert(el.name)
+                  $(this).detach().appendTo('.content-2');
+                  $('#'+el.name).detach().appendTo('.content-2');
+              } else {
+                  $(this).detach().appendTo('.content-1');
+                  $('#'+el.name).detach().appendTo('.content-1');
+              }
+          });
+      });
+  </script>
