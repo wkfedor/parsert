@@ -54,6 +54,7 @@ class ProjectsController < ApplicationController
 
     @temp=Project.new(@temp)
     @temp.save
+    redirect_to action: :index
   end
 
 
