@@ -50,12 +50,10 @@ class ProjectsController < ApplicationController
 
 
   def create
-    #@temp=Project.new({"name"=>"111","dictionars"=>[{"_id"=>"61de8e938040180b24f74142"},{"_id"=>"61dea70a8040180b24f74143"}]})
     @temp={}
     @temp["dictionars"]=[]
     project_params2.each do |x|
-      #@temp["dictionars"] <<  {"_id"=>"ObjectId(\"#{x}\")"}
-       @temp["dictionars"] << {:_id => BSON::ObjectId("#{x}")}
+        @temp["dictionars"] << {:_id => BSON::ObjectId("#{x}")}
     end
     @temp["name"]=project_params["name"]
     @temp["masslink"]=project_params["masslink"]
