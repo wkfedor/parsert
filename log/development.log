@@ -35694,3 +35694,314 @@ MONGODB | 127.0.0.1:27017 req:2759 | parsert.find | SUCCEEDED | 0.001s
 Completed 200 OK in 212ms (Views: 193.2ms | MongoDB: 0.0ms)
 
 
+Started GET "/" for ::1 at 2022-04-25 21:44:13 +0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server 127.0.0.1:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[127.0.0.1:27017] servers=[#<Server address=127.0.0.1:27017 UNKNOWN>]>
+MONGODB | Server description for 127.0.0.1:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | 127.0.0.1:27017 req:5 conn:1:1 | parsert.find | STARTED | {"find"=>"messages", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:5 | parsert.find | SUCCEEDED | 0.536s
+  Rendered posts/index.html.erb within layouts/application (1578.1ms)
+Completed 200 OK in 5851ms (Views: 3274.1ms | MongoDB: 0.5ms)
+
+
+Started GET "/projects/new" for ::1 at 2022-04-25 21:44:23 +0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:6 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:6 | parsert.find | SUCCEEDED | 0.042s
+  Rendered projects/new.html.erb within layouts/application (176.0ms)
+Completed 200 OK in 360ms (Views: 339.3ms | MongoDB: 0.0ms)
+
+
+Started GET "/projects/index" for ::1 at 2022-04-25 21:44:26 +0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:7 conn:1:1 | parsert.find | STARTED | {"find"=>"projects", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:7 | parsert.find | SUCCEEDED | 0.051s
+MONGODB | 127.0.0.1:27017 req:8 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:8 | parsert.find | SUCCEEDED | 0.002s
+MONGODB | 127.0.0.1:27017 req:9 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:9 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:10 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:10 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:11 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:11 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:12 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:12 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:13 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:13 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:14 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:14 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:15 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:15 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:16 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:16 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:17 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:17 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:18 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:18 | parsert.find | SUCCEEDED | 0.001s
+  Rendered projects/index.html.erb within layouts/application (140.0ms)
+Completed 200 OK in 334ms (Views: 313.7ms | MongoDB: 0.1ms)
+
+
+Started GET "/projects/index" for ::1 at 2022-04-25 21:48:33 +0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:44 conn:1:1 | parsert.find | STARTED | {"find"=>"projects", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:44 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:45 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:45 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:46 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:46 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:47 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:47 | parsert.find | SUCCEEDED | 0.001s
+  Rendered projects/index.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 208ms (Views: 202.6ms | MongoDB: 0.0ms)
+
+
+Started GET "/projects/new" for ::1 at 2022-04-25 21:48:38 +0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:49 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:49 | parsert.find | SUCCEEDED | 0.001s
+  Rendered projects/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 175ms (Views: 170.3ms | MongoDB: 0.0ms)
+
+
+Started POST "/projects" for ::1 at 2022-04-25 21:48:52 +0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ds3firYcg/NNA/Q6hSz3o/1Dvf181Ctfr515LvP18pA8GJ/gCMTe/iKyUOOaI+3fDBjCwAI3/pNwxCh9O+PCsA==", "project"=>{"name"=>"второй проект"}, "commit"=>"Отправить", "dictionars"=>["61dff54580401845a10071c6", "61dff58380401845a10071c7"]}
+MONGODB | 127.0.0.1:27017 req:51 conn:1:1 | parsert.insert | STARTED | {"insert"=>"projects", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('6266b4d48782820a4002dbcb'), "dictionars"=>[{"_id"=>BSON::ObjectId('61dff54580401845a10071c6')}, {"_id"=>BSON::ObjectId('61dff58380401845a10071c7')}], "name"=>"второй проект"...
+MONGODB | 127.0.0.1:27017 req:51 | parsert.insert | SUCCEEDED | 0.141s
+Redirected to http://localhost:3000/projects/index
+Completed 302 Found in 154ms (MongoDB: 0.1ms)
+
+
+Started GET "/projects/index" for ::1 at 2022-04-25 21:48:52 +0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:52 conn:1:1 | parsert.find | STARTED | {"find"=>"projects", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:52 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:53 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:53 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:54 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:54 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:55 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:55 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:56 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:56 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:57 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x15820 type=uuid data=0x6bae3e3d60e849c6...>}}
+MONGODB | 127.0.0.1:27017 req:57 | parsert.find | SUCCEEDED | 0.001s
+  Rendered projects/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 207ms (Views: 202.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/projects/61de8e938040180b24f74142/edit" for ::1 at 2022-04-26 01:59:59 +0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"61de8e938040180b24f74142"}
+MONGODB | 127.0.0.1:27017 req:1559 conn:1:1 | parsert.find | STARTED | {"find"=>"projects", "filter"=>{"_id"=>BSON::ObjectId('61de8e938040180b24f74142')}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1559 | parsert.find | SUCCEEDED | 0.717s
+  Rendering projects/edit.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:1561 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1561 | parsert.find | SUCCEEDED | 0.318s
+MONGODB | 127.0.0.1:27017 req:1562 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1562 | parsert.find | SUCCEEDED | 0.001s
+  Rendered projects/edit.html.erb within layouts/application (1943.1ms)
+Completed 200 OK in 6885ms (Views: 4793.8ms | MongoDB: 1.0ms)
+
+
+Started GET "/projects/index" for ::1 at 2022-04-26 02:00:16 +0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:1564 conn:1:1 | parsert.find | STARTED | {"find"=>"projects", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1564 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:1565 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1565 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:1566 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1566 | parsert.find | SUCCEEDED | 0.076s
+MONGODB | 127.0.0.1:27017 req:1567 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1567 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:1568 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1568 | parsert.find | SUCCEEDED | 0.023s
+MONGODB | 127.0.0.1:27017 req:1569 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1569 | parsert.find | SUCCEEDED | 0.001s
+  Rendered projects/index.html.erb within layouts/application (171.0ms)
+Completed 200 OK in 1770ms (Views: 1668.6ms | MongoDB: 0.1ms)
+
+
+Started GET "/projects/6266b4d48782820a4002dbcb/edit" for ::1 at 2022-04-26 02:00:19 +0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"6266b4d48782820a4002dbcb"}
+MONGODB | 127.0.0.1:27017 req:1570 conn:1:1 | parsert.find | STARTED | {"find"=>"projects", "filter"=>{"_id"=>BSON::ObjectId('6266b4d48782820a4002dbcb')}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1570 | parsert.find | SUCCEEDED | 0.054s
+  Rendering projects/edit.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:1571 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1571 | parsert.find | SUCCEEDED | 0.034s
+MONGODB | 127.0.0.1:27017 req:1572 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1572 | parsert.find | SUCCEEDED | 0.002s
+  Rendered projects/edit.html.erb within layouts/application (196.0ms)
+Completed 200 OK in 1732ms (Views: 1536.0ms | MongoDB: 0.1ms)
+
+
+Started GET "/projects/index" for ::1 at 2022-04-26 02:00:24 +0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:1574 conn:1:1 | parsert.find | STARTED | {"find"=>"projects", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1574 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:1575 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1575 | parsert.find | SUCCEEDED | 0.002s
+MONGODB | 127.0.0.1:27017 req:1576 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1576 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:1577 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1577 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:1578 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1578 | parsert.find | SUCCEEDED | 0.002s
+MONGODB | 127.0.0.1:27017 req:1579 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1579 | parsert.find | SUCCEEDED | 0.002s
+  Rendered projects/index.html.erb within layouts/application (85.0ms)
+Completed 200 OK in 859ms (Views: 794.6ms | MongoDB: 0.0ms)
+
+
+Started GET "/projects/index" for ::1 at 2022-04-26 02:00:26 +0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:1580 conn:1:1 | parsert.find | STARTED | {"find"=>"projects", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1580 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:1581 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1581 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:1582 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1582 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:1583 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1583 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:1584 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1584 | parsert.find | SUCCEEDED | 0.002s
+MONGODB | 127.0.0.1:27017 req:1585 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1585 | parsert.find | SUCCEEDED | 0.001s
+  Rendered projects/index.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 671ms (Views: 555.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/projects/index" for ::1 at 2022-04-26 02:00:26 +0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:1586 conn:1:1 | parsert.find | STARTED | {"find"=>"projects", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1586 | parsert.find | SUCCEEDED | 0.002s
+MONGODB | 127.0.0.1:27017 req:1587 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1587 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:1588 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1588 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:1589 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1589 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:1590 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1590 | parsert.find | SUCCEEDED | 0.002s
+MONGODB | 127.0.0.1:27017 req:1591 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1591 | parsert.find | SUCCEEDED | 0.068s
+  Rendered projects/index.html.erb within layouts/application (191.0ms)
+Completed 200 OK in 432ms (Views: 426.7ms | MongoDB: 0.1ms)
+
+
+Started GET "/projects/index" for ::1 at 2022-04-26 02:00:27 +0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:1592 conn:1:1 | parsert.find | STARTED | {"find"=>"projects", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1592 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:1593 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1593 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:1594 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1594 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:1595 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1595 | parsert.find | SUCCEEDED | 0.011s
+MONGODB | 127.0.0.1:27017 req:1596 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1596 | parsert.find | SUCCEEDED | 0.001s
+MONGODB | 127.0.0.1:27017 req:1597 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1597 | parsert.find | SUCCEEDED | 0.001s
+  Rendered projects/index.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 300ms (Views: 294.6ms | MongoDB: 0.0ms)
+
+
+Started GET "/projects/new" for ::1 at 2022-04-26 02:00:27 +0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:1598 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x47140 type=uuid data=0xf418e01deebe4390...>}}
+MONGODB | 127.0.0.1:27017 req:1598 | parsert.find | SUCCEEDED | 0.001s
+  Rendered projects/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 353ms (Views: 296.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2022-04-26 20:46:32 +0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:2342 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x62760 type=uuid data=0x5f9e58cbcdff4f28...>}}
+MONGODB | 127.0.0.1:27017 req:2342 | parsert.find | SUCCEEDED | 0.892s
+  Rendered projects/new.html.erb within layouts/application (1330.1ms)
+Completed 200 OK in 3843ms (Views: 3126.6ms | MongoDB: 0.9ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2022-04-26 20:46:45 +0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:2344 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x62760 type=uuid data=0x5f9e58cbcdff4f28...>}}
+MONGODB | 127.0.0.1:27017 req:2344 | parsert.find | SUCCEEDED | 0.001s
+  Rendered projects/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 343ms (Views: 321.6ms | MongoDB: 0.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2022-04-26 20:46:46 +0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:2345 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x62760 type=uuid data=0x5f9e58cbcdff4f28...>}}
+MONGODB | 127.0.0.1:27017 req:2345 | parsert.find | SUCCEEDED | 0.014s
+  Rendered projects/new.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 292ms (Views: 287.4ms | MongoDB: 0.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2022-04-26 20:46:48 +0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:2346 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x62760 type=uuid data=0x5f9e58cbcdff4f28...>}}
+MONGODB | 127.0.0.1:27017 req:2346 | parsert.find | SUCCEEDED | 0.001s
+  Rendered projects/new.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 460ms (Views: 454.2ms | MongoDB: 0.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2022-04-26 22:16:04 +0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:2882 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x73820 type=uuid data=0x1ab9168dfa504fac...>}}
+MONGODB | 127.0.0.1:27017 req:2882 | parsert.find | SUCCEEDED | 0.033s
+  Rendered projects/new.html.erb within layouts/application (1529.1ms)
+Completed 200 OK in 2034ms (Views: 1984.9ms | MongoDB: 0.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2022-04-26 22:16:30 +0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:2886 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x73820 type=uuid data=0x1ab9168dfa504fac...>}}
+MONGODB | 127.0.0.1:27017 req:2886 | parsert.find | SUCCEEDED | 0.001s
+  Rendered projects/new.html.erb within layouts/application (247.0ms)
+Completed 200 OK in 1244ms (Views: 1193.7ms | MongoDB: 0.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2022-04-26 22:32:55 +0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:2985 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x73820 type=uuid data=0x1ab9168dfa504fac...>}}
+MONGODB | 127.0.0.1:27017 req:2985 | parsert.find | SUCCEEDED | 0.001s
+  Rendered projects/new.html.erb within layouts/application (843.0ms)
+Completed 200 OK in 1148ms (Views: 1142.8ms | MongoDB: 0.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2022-04-26 22:34:04 +0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+MONGODB | 127.0.0.1:27017 req:2993 conn:1:1 | parsert.find | STARTED | {"find"=>"dictionars", "filter"=>{}, "$db"=>"parsert", "lsid"=>{"id"=><BSON::Binary:0x73820 type=uuid data=0x1ab9168dfa504fac...>}}
+MONGODB | 127.0.0.1:27017 req:2993 | parsert.find | SUCCEEDED | 0.001s
+  Rendered projects/new.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 262ms (Views: 256.8ms | MongoDB: 0.0ms)
+
+
