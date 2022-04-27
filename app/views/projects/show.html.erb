@@ -1,47 +1,51 @@
-  <table class="table">
-    <thead>
-    <tr>
-      <th>Текст</th>
-      <th>ID</th>
-      <th>Подробно</th>
-      <th>Изменить</th>
-      <th>Удалить</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-
-      <%  @msql.inspect  %>
-
-
-      <%  @msql.each do |m| %>
-
-      <tr>
-        <th scope="row"><%= m.name %></th>
-        <td>
-            <% m.inspect %>
-
-
-          <% m.dictionars.each do |a|  %>
-            <% a["_id"] %>
-
-            <% @msqld.each do |b|%>
-
-              <% if b.id == a["_id"] %>
-                <span class="border border-primary"><%= b.ves %></span>
-                <span class="border border-success"><%= b.word %></span>
-                <span class="border border-info"><%= b.comment %></span>
-                <br/>
-              <% end %>
-            <% end %>
-          <% end %>
-        </td>
-
-        <td></td>
-        <td>   <%= link_to "Редактировать", edit_project_path(m) %></td>
-        <td></td>
-
-      </tr>
+<table class="table">
+  <thead>
+  <tr>
+    <th>Текст</th>
+    <th>ID</th>
+    <th>Урлы для работы</th>
+    <th>Актив</th>
+    <th>Изменить</th>
+    <th>Удалить</th>
+  </tr>
+  </thead>
+  <tbody>
+  <%  @msql.each do |m| %>
+    <% if m.work == "yes"%>
+      <tr class="table-light" scope="row">
+    <% else %>
+      <tr class="table-secondary" scope="row">
     <% end %>
-    </tbody>
-  </table>
+
+    <td ><%= m.name %></td>
+    <td>
+      <% m.dictionars.each do |a|  %>
+        <% a["_id"] %>
+
+        <% @msqld.each do |b|%>
+
+          <% if b.id == a["_id"] %>
+            <span class="border border-primary"><%= b.ves %></span>
+            <span class="border border-success"><%= b.word %></span>
+            <span class="border border-info"><%= b.comment %></span>
+            <br/>
+          <% end %>
+        <% end %>
+      <% end %>
+    </td>
+    <td>
+
+      <% m.masslink.split(";").each  do |i| %>
+        <%= link_to "ссылка", i  %><br/>
+      <% end %>
+
+
+    </td>
+    <td><%= m.work %></td>
+    <td>   <%= link_to "Редактировать", edit_project_path(m) %></td>
+    <td>   <%= link_to "Удалить", project_path(m), method: :delete  %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>

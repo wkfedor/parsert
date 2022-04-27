@@ -9,6 +9,21 @@
           Имя<br/>
           <%= f.text_field :name  %>
         </p>
+
+        <p>
+          массив ссылок через точку с запятой<br/>
+          <%= f.text_area :masslink, size: "70x5" %>
+        </p>
+
+        <p>
+          <%= f.radio_button :work, "yes", :checked => true %>
+          <%= label_tag(:work_true, "Активен") %>
+          <%= f.radio_button :work, "no" %>
+          <%= label_tag(:work_false, "Заблокированно") %>
+        </p>
+
+
+        <p>
         <%= f.submit "Отправить" %>
         </p>
         <div style="margin: 50px;">
@@ -17,7 +32,7 @@
             <% @msqld.each do |x| %>
               <% if @a.include? "#{x.id}" %>
                 <button type="button" id=<%= "move_#{x.id}"%>  name=<%= "#{x.id}"%> >  <%= x.comment %>||<%= x.ves %>||<%= x.word %></button>
-                <input type="hidden" id=<%= "#{x.id}"%>  name=dictionars[<%= "#{x.id}"%>] value=<%= "#{x.id}"%>>
+                <input type="hidden" id=<%= "#{x.id}"%>  name=dictionars[]  value=<%= "#{x.id}"%>>
           <% end %>
             <% end %>
           </div>
@@ -35,7 +50,7 @@
       <% if @a.include? "#{x.id}" %>
       <% else %>
         <button type="button" id=<%= "move_#{x.id}"%> name=<%= "#{x.id}"%> >  <%= x.comment %>||<%= x.ves %>||<%= x.word %></button>
-        <input type="hidden" id=<%= "#{x.id}"%>  name=dictionars[<%= "#{x.id}"%>] value=<%= "#{x.id}"%>>
+        <input type="hidden" id=<%= "#{x.id}"%>  name=dictionars[]  value=<%= "#{x.id}"%>>
       <% end %>
 
     <% end %>

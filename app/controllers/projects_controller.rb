@@ -22,20 +22,28 @@ class ProjectsController < ApplicationController
   end
 
 
+  def destroy
+    Project.find_by(_id:params[:id]).delete
+    redirect_to action: :index
+  end
+
+
+
   def update
-
+    @temp={}
+    @temp["dictionars"]=[]
     @project=Project.find_by(_id:params[:id])
-    puts "------------------------"
-    #puts @project.inspect
-    puts  "project="
-    puts params.require(:project).inspect   # работает
-    puts "------------------------"
-    puts  "dictionar="
-    puts params.require(:dictionars).inspect   # работает
-    puts "------------------------"
     @project.update(project_params)
-    @project.update(project_params2)           # тут косяк!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+    #@project.update(project_params2)
+
+    project_params2.each do |x|
+      @temp["dictionars"] << {:_id => BSON::ObjectId("#{x}")}
+    end
+
+    #render plain:  @temp.inspect
+    @temp=Project.update(@temp)
+    #@temp.save
    #puts params.require(:project).inspect
     redirect_to action: :index
   end
@@ -50,6 +58,8 @@ class ProjectsController < ApplicationController
        @temp["dictionars"] << {:_id => BSON::ObjectId("#{x}")}
     end
     @temp["name"]=project_params["name"]
+    @temp["masslink"]=project_params["masslink"]
+    @temp["work"]=project_params["work"]
     #render plain: @temp   # вывести содержимое на экран не используя вьюху
 
     @temp=Project.new(@temp)
@@ -60,18 +70,13 @@ class ProjectsController < ApplicationController
 
 
   def show
-    @msql=Project.all
+    @msql=[]
+    @msql << Project.find_by(_id:params[:id])
+    #render plain: @msql.inspect
     @msqld=Dictionar.all
   end
 
   def new
-=begin
-    @temp={}
-    @temp["name"]=1000
-    @temp["dictionars"]=[]
-    @temp["dictionars"] << {"_id"=>"61de8e938040180b24f74142"}
-    @temp["dictionars"] << {"_id"=>"61de8e938040180b24f74141"}
-=end
     @msqld=Dictionar.all
   end
 
@@ -79,12 +84,16 @@ class ProjectsController < ApplicationController
 
 
   private def project_params
-    params.require(:project).permit(:name)
+    params.require(:project).permit(:name,:masslink,:work)
 
   end
 
   private def project_params2
-    params.require(:dictionars)
+    begin                                           # аналог try catch
+      params.require(:dictionars)                   # аналог try catch
+    rescue Exception                                # аналог try catch
+      ["6268c61f80401826b7a04038"]                  # аналог try catch
+    end                                             # аналог try catch
   end
 
 end

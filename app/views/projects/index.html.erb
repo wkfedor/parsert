@@ -11,19 +11,15 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-
-      <%  @msql.inspect  %>
-
-
       <%  @msql.each do |m| %>
+    <% if m.work == "yes"%>
+        <tr class="table-light" scope="row">
+    <% else %>
+        <tr class="table-secondary" scope="row">
+    <% end %>
 
-      <tr>
-        <th scope="row"><%= m.name %></th>
+        <td ><%= m.name %></td>
         <td>
-            <% m.inspect %>
-          
-
           <% m.dictionars.each do |a|  %>
             <% a["_id"] %>
 
@@ -38,11 +34,18 @@
             <% end %>
           <% end %>
         </td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+
+         <% m.masslink.split(";").each  do |i| %>
+          <%= link_to "ссылка", i  %><br/>
+            <% end %>
+
+
+        </td>
+        <td><%= m.work %></td>
+        <td>   <%= link_to "Подробнее", project_path(m), method: :get  %></td>
         <td>   <%= link_to "Редактировать", edit_project_path(m) %></td>
-        <td></td>
+        <td>   <%= link_to "Удалить", project_path(m), method: :delete  %></td>
 
       </tr>
     <% end %>
