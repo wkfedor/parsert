@@ -1,5 +1,8 @@
 class ProjectsController < ApplicationController
 
+   require 'open-uri'
+   require 'nokogiri'
+   require 'open_uri_redirections'
 
   def index
      @msql=Project.all
@@ -72,7 +75,66 @@ class ProjectsController < ApplicationController
     @msql << Project.find_by(_id:params[:id])
     #render plain: @msql.inspect
     @msqld=Dictionar.all
-  end
+
+     # для тестирования открыть url вывести его  содержимое на экран
+     #html = open("https://youla.ru/omsk/hehndmejd/oformlenie-interera")
+     #@parser = html #Nokogiri::HTML html
+     # @parser=[]
+     #@parser.css('.sc-iyePXt gTvbKv').map do |showing|
+     # @parser << showing 
+     #end
+#require 'rubygems'
+#require 'capybara/cucumber'
+
+#require 'rubygems'
+#require 'selenium-webdriver'
+
+Selenium::WebDriver::Chrome.driver_path = "C:/ruby/parsert/parsert/chromedriver.exe"
+
+driver = Selenium::WebDriver.for :chrome
+
+driver.navigate.to "https://youla.ru/krasnoyarsk?attributes[term_of_placement][from]=-7%20days&attributes[term_of_placement][to]=now&attributes[sort_field]=date_published&q=%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%8B%D0%BD%D1%8C"
+@parser=""
+@part=[]
+sleep(2)
+
+2.times  do |t|
+ @parser = driver.page_source
+ doc = Nokogiri::HTML(@parser)
+ doc.xpath("/html/body/div/div/div/main/div/div/div/section/div/div/div/div/div/div/div/div").each do |anchor|
+ @part << anchor
+ end
+ driver.execute_script("window.scrollTo(0, document.documentElement.scrollHeight);")
+ sleep(2)
+end
+
+
+
+#driver.execute_script("window.scrollTo(0, document.documentElement.scrollHeight);")
+#sleep(2)
+#@parser =@parser + driver.page_source
+
+#doc.xpath("/html/body/div[2]/div[1]/div[4]/main/div/div[2]/div/section/div[4]/div[2]/div/div/div/div/div/div").each do |anchor|
+
+#driver.manage.window.resize_to(800, 800)
+#driver.save_screenshot "screenshot.png"
+
+=begin
+driver.navigate.to "http://google.com"
+element = driver.find_element(name: 'q')
+element.click
+element.send_keys "Hello WebDriver!"
+element.submit
+=end
+
+#@parser= element
+
+
+driver.quit
+
+
+
+end
 
   def new
     @msqld=Dictionar.all
