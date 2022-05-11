@@ -102,8 +102,15 @@ driver.quit
 =end  #что бы не постоянно лезть в юлу, сохранил одну страницу
 
 # удалить этот код и раскоменть выше
- @parser= File.read("C:/ruby/parsert/parsert/testdata/1.txt")
- doc = Nokogiri::HTML(@parser)
+
+
+    begin
+      @parser= File.read("C:/ruby/parsert/parsert/testdata/1.txt")
+    rescue Exception
+      @parser= File.read("/home/fnachatoy/parsert/parsert/testdata/1.txt")
+    end
+
+    doc = Nokogiri::HTML(@parser)
 
 i=0 # для массива
 
@@ -127,14 +134,14 @@ i=0 # для массива
 =end
 
 
-
+@temp["open"]=false
 @temp["url"]=anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]/@href").first
 @temp["head"]=anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]/@title").first
 a=anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]//text()")
 
     begin                                           
-    @temp["pr"]=a[1]
-    @masslink << a[1].class
+    @temp["pr"]= a[1].text.scan(/\w+/).join.to_i
+    #@masslink << a[1].text.scan(/\w+/).join.to_i
     rescue Exception                                
     @temp["pr"]=-1                                      
     end           

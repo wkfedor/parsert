@@ -11,4 +11,5 @@ class Message
   field :photo, type: String
   field :phone, type: String
   field :profile, type: String
+  field :open, type: Boolean
 end
