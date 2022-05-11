@@ -50,7 +50,20 @@
   </tbody>
 </table>
 
+Массив ссылок что должен получить
+<%@masslink.each do |y|  %>
+<%=y%><br/><br/>
+<%end%>
+
+<br/><br/><br/>
+
+<%=@part.length%>
+<br/>
 <%@part.each do |x| %>
+
+<h1><%=@part.index(x) %></h1>
 <%=x%>
+
+
 <br/><br/>
 <% end %>

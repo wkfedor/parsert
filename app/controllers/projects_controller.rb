@@ -75,31 +75,22 @@ class ProjectsController < ApplicationController
     @msql << Project.find_by(_id:params[:id])
     #render plain: @msql.inspect
     @msqld=Dictionar.all
-
-     # для тестирования открыть url вывести его  содержимое на экран
-     #html = open("https://youla.ru/omsk/hehndmejd/oformlenie-interera")
-     #@parser = html #Nokogiri::HTML html
-     # @parser=[]
-     #@parser.css('.sc-iyePXt gTvbKv').map do |showing|
-     # @parser << showing 
-     #end
-#require 'rubygems'
-#require 'capybara/cucumber'
-
-#require 'rubygems'
-#require 'selenium-webdriver'
-
-Selenium::WebDriver::Chrome.driver_path = "C:/ruby/parsert/parsert/chromedriver.exe"
-
-driver = Selenium::WebDriver.for :chrome
-
-driver.navigate.to "https://youla.ru/krasnoyarsk?attributes[term_of_placement][from]=-7%20days&attributes[term_of_placement][to]=now&attributes[sort_field]=date_published&q=%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%8B%D0%BD%D1%8C"
 @parser=""
 @part=[]
+@masslink=[]
+@temp={}
+=begin  #что бы не постоянно лезть в юлу, сохранил одну страницу
+Selenium::WebDriver::Chrome.driver_path = "C:/ruby/parsert/parsert/chromedriver.exe"
+driver = Selenium::WebDriver.for :chrome
+driver.navigate.to "https://youla.ru/krasnoyarsk?attributes[term_of_placement][from]=-7%20days&attributes[term_of_placement][to]=now&attributes[sort_field]=date_published&q=%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%8B%D0%BD%D1%8C"
 sleep(2)
-
 2.times  do |t|
  @parser = driver.page_source
+ 
+ # сохранили в файл с тестовыми данными содержимое браузера
+ #File.open("C:/ruby/parsert/parsert/testdata/1.txt", 'w') { |file| file.write(@parser) }
+ #что бы не постоянно лезть в юлу, сохранил одну страницу
+
  doc = Nokogiri::HTML(@parser)
  doc.xpath("/html/body/div/div/div/main/div/div/div/section/div/div/div/div/div/div/div/div").each do |anchor|
  @part << anchor
@@ -107,30 +98,83 @@ sleep(2)
  driver.execute_script("window.scrollTo(0, document.documentElement.scrollHeight);")
  sleep(2)
 end
+driver.quit
+=end  #что бы не постоянно лезть в юлу, сохранил одну страницу
+
+# удалить этот код и раскоменть выше
+ @parser= File.read("C:/ruby/parsert/parsert/testdata/1.txt")
+ doc = Nokogiri::HTML(@parser)
+
+i=0 # для массива
 
 
-
-#driver.execute_script("window.scrollTo(0, document.documentElement.scrollHeight);")
-#sleep(2)
-#@parser =@parser + driver.page_source
-
-#doc.xpath("/html/body/div[2]/div[1]/div[4]/main/div/div[2]/div/section/div[4]/div[2]/div/div/div/div/div/div").each do |anchor|
-
-#driver.manage.window.resize_to(800, 800)
-#driver.save_screenshot "screenshot.png"
-
+ doc.xpath("/html/body/div/div/div/main/div/div/div/section/div/div/div/div/div/div/div/div").each do |anchor|
+ @part << anchor 
 =begin
-driver.navigate.to "http://google.com"
-element = driver.find_element(name: 'q')
-element.click
-element.send_keys "Hello WebDriver!"
-element.submit
+  anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]/@href").each do |a|
+    
+    @masslink << a
+    @temp["url"]=a
+    #render plain: Message.where(url: a).first
+    #render plain: a.inspect
+    #return
+   if Message.where(url: a).first == nil
+    @temp=Message.new(@temp)
+    @temp.save
+   end
+   # сделай проверку если повторный элемент запиши в базу с другим параметром для проверки
+  end
 =end
 
-#@parser= element
 
 
-driver.quit
+@temp["url"]=anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]/@href").first
+@temp["head"]=anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]/@title").first
+a=anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]//text()")
+
+    begin                                           
+    @temp["pr"]=a[1].to_i
+    @masslink << a[1].to_i
+    rescue Exception                                
+    @temp["pr"]=-1                                      
+    end           
+
+#@masslink << (@temp["url"].to_s+@temp["head"].to_s+@temp["pr"].to_s)
+
+  if Message.where(url: @temp["url"]).first == nil 
+  @t=Message.new(@temp)    
+  @t.save
+  end
+
+
+#@masslink << (a[0].to_s+a[1].to_s+a[2].to_s+a[3].to_s+a[4].to_s)
+
+
+                                  
+
+
+
+
+=begin
+5.times do |m|
+    begin                                           
+    temp=temp+a[m]                                  
+    rescue Exception                                
+    temp=temp                                       
+    end                                             
+end
+=end
+
+ 
+
+i=i+1
+end
+# удалить этот код и раскоменть выше
+
+
+
+
+
 
 
 
