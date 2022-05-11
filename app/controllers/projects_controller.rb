@@ -133,8 +133,8 @@ i=0 # для массива
 a=anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]//text()")
 
     begin                                           
-    @temp["pr"]=a[1].to_i
-    @masslink << a[1].to_i
+    @temp["pr"]=a[1]
+    @masslink << a[1].class
     rescue Exception                                
     @temp["pr"]=-1                                      
     end           
