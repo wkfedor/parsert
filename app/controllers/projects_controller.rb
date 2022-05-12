@@ -152,16 +152,7 @@ a=anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]//tex
   @t=Message.new(@temp)    
   @t.save
   end
-
-
 #@masslink << (a[0].to_s+a[1].to_s+a[2].to_s+a[3].to_s+a[4].to_s)
-
-
-                                  
-
-
-
-
 =begin
 5.times do |m|
     begin                                           
@@ -171,21 +162,18 @@ a=anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]//tex
     end                                             
 end
 =end
-
- 
-
 i=i+1
 end
 # удалить этот код и раскоменть выше
+end
 
-
-
-
-
+def podrobno url
+# получаю url страницы по которому надо перейти и загрузить текст объявления в базу
 
 
 
 end
+
 
   def new
     @msqld=Dictionar.all
