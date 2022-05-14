@@ -71,10 +71,10 @@ class ProjectsController < ApplicationController
 
 
   def show
-    @msql=[]
-    @msql << Project.find_by(_id:params[:id])
-    #render plain: @msql.inspect
-    @msqld=Dictionar.all
+@msql=[]
+@msql << Project.find_by(_id:params[:id])
+#render plain: @msql.inspect
+@msqld=Dictionar.all
 @parser=""
 @part=[]
 @masslink=[]
@@ -165,14 +165,35 @@ end
 i=i+1
 end
 # удалить этот код и раскоменть выше
-end
 
-def podrobno url
-# получаю url страницы по которому надо перейти и загрузить текст объявления в базу
-
-
+podrobno 
 
 end
+
+def podrobno
+#1 отдельный процесс, нужно 2 раза открывать закрывать барузер
+#2 из плюсов сейчас удобно будет отлаживать
+#3 постораться переделать парсер так что бы браузер открывался 1 раз в процессе работы
+ Selenium::WebDriver::Chrome.driver_path = "C:/ruby/parsert/parsert/chromedriver.exe"
+ driver = Selenium::WebDriver.for :chrome
+ Message.where(open:false).not(url: nil).each do |m|
+#render plain: m.id.to_s+m.url.to_s  
+#return 
+ driver.navigate.to "https://youla.ru"+m.url.to_s
+ sleep(2)
+ pagesourse = driver.page_source
+ doc = Nokogiri::HTML(pagesourse)
+ anchor=doc.xpath(".//dd//p//text()") 
+
+  messages=Message.find_by(_id:m.id)
+  #render plain: messages.inspect  
+  #
+  messages.update(text:anchor, open:'true')
+ end
+ driver.quit
+end
+
+
 
 
   def new
