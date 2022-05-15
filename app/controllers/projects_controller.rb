@@ -70,7 +70,7 @@ class ProjectsController < ApplicationController
 
 
 
-  def show
+def show
 @msql=[]
 @msql << Project.find_by(_id:params[:id])
 #render plain: @msql.inspect
@@ -79,91 +79,47 @@ class ProjectsController < ApplicationController
 @part=[]
 @masslink=[]
 @temp={}
-=begin  #что бы не постоянно лезть в юлу, сохранил одну страницу
-Selenium::WebDriver::Chrome.driver_path = "C:/ruby/parsert/parsert/chromedriver.exe"
-driver = Selenium::WebDriver.for :chrome
-driver.navigate.to "https://youla.ru/krasnoyarsk?attributes[term_of_placement][from]=-7%20days&attributes[term_of_placement][to]=now&attributes[sort_field]=date_published&q=%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%8B%D0%BD%D1%8C"
-sleep(2)
-2.times  do |t|
- @parser = driver.page_source
- 
- # сохранили в файл с тестовыми данными содержимое браузера
- #File.open("C:/ruby/parsert/parsert/testdata/1.txt", 'w') { |file| file.write(@parser) }
- #что бы не постоянно лезть в юлу, сохранил одну страницу
 
- doc = Nokogiri::HTML(@parser)
- doc.xpath("/html/body/div/div/div/main/div/div/div/section/div/div/div/div/div/div/div/div").each do |anchor|
- @part << anchor
- end
- driver.execute_script("window.scrollTo(0, document.documentElement.scrollHeight);")
- sleep(2)
-end
-driver.quit
-=end  #что бы не постоянно лезть в юлу, сохранил одну страницу
+       #Project.find_by(_id:params[:id]).masslink.split(";").map(&:to_s) для каждого элемента вызываем to_s
 
-# удалить этот код и раскоменть выше
+    Selenium::WebDriver::Chrome.driver_path = "C:/ruby/parsert/parsert/chromedriver.exe"
+    driver = Selenium::WebDriver.for :chrome
 
+    Project.find_by(_id:params[:id]).masslink.split(";").map(&:to_s).each do |link|
 
-    begin
-      @parser= File.read("C:/ruby/parsert/parsert/testdata/1.txt")
-    rescue Exception
-      @parser= File.read("/home/fnachatoy/parsert/parsert/testdata/1.txt")
-    end
+    driver.navigate.to link
+    sleep(2)
+     
+    driver.execute_script("window.scrollTo(0, document.documentElement.scrollHeight);")
+    sleep(2)
+   
+    @parser = driver.page_source
 
     doc = Nokogiri::HTML(@parser)
+  
+        doc.xpath("/html/body/div/div/div/main/div/div/div/section/div/div/div/div/div/div/div/div").each do |anchor|
+        @part << anchor 
+        @temp["open"]=false
+        @temp["url"]=anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]/@href").first
+        @temp["head"]=anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]/@title").first
+        a=anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]//text()")
+        
+        begin                                           
+        @temp["pr"]= a[1].text.scan(/\w+/).join.to_i
+        #@masslink << a[1].text.scan(/\w+/).join.to_i
+        rescue Exception                                
+        @temp["pr"]=-1                                      
+        end           
 
-i=0 # для массива
-
-
- doc.xpath("/html/body/div/div/div/main/div/div/div/section/div/div/div/div/div/div/div/div").each do |anchor|
- @part << anchor 
-=begin
-  anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]/@href").each do |a|
-    
-    @masslink << a
-    @temp["url"]=a
-    #render plain: Message.where(url: a).first
-    #render plain: a.inspect
-    #return
-   if Message.where(url: a).first == nil
-    @temp=Message.new(@temp)
-    @temp.save
-   end
-   # сделай проверку если повторный элемент запиши в базу с другим параметром для проверки
-  end
-=end
-
-
-@temp["open"]=false
-@temp["url"]=anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]/@href").first
-@temp["head"]=anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]/@title").first
-a=anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]//text()")
-
-    begin                                           
-    @temp["pr"]= a[1].text.scan(/\w+/).join.to_i
-    #@masslink << a[1].text.scan(/\w+/).join.to_i
-    rescue Exception                                
-    @temp["pr"]=-1                                      
-    end           
-
-#@masslink << (@temp["url"].to_s+@temp["head"].to_s+@temp["pr"].to_s)
-
-  if Message.where(url: @temp["url"]).first == nil 
-  @t=Message.new(@temp)    
-  @t.save
-  end
-#@masslink << (a[0].to_s+a[1].to_s+a[2].to_s+a[3].to_s+a[4].to_s)
-=begin
-5.times do |m|
-    begin                                           
-    temp=temp+a[m]                                  
-    rescue Exception                                
-    temp=temp                                       
-    end                                             
+        #@masslink << (@temp["url"].to_s+@temp["head"].to_s+@temp["pr"].to_s)
+      
+        if Message.where(url: @temp["url"]).first == nil 
+        @t=Message.new(@temp)    
+        @t.save
+        end
+    end
 end
-=end
-i=i+1
-end
+driver.quit
 # удалить этот код и раскоменть выше
 
 podrobno 
