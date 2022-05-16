@@ -72,8 +72,9 @@ class ProjectsController < ApplicationController
     @msql = []
     @msql << Project.find_by(_id: params[:id])
 
-    #render plain: Rails.root
-    #return
+
+
+
 
     @msqld = Dictionar.all
     @parser = ""
@@ -83,6 +84,22 @@ class ProjectsController < ApplicationController
 
     #Project.find_by(_id:params[:id]).masslink.split(";").map(&:to_s) для каждого элемента вызываем to_s
     #Версия 96.0.4664.45  debian
+
+
+    #тестируем новый функционал, расчет баланса
+    #
+    # --- в работу с messages при сохранении объявления первый раз добавить ссылку на id проекта
+    # --- в работу с messages добавить  поле расчет веса
+    # --- в работу с messages добавить  поле время когда был расчитан веес
+    # --- в проекты добавить поле при каком весе выводит сообщения
+    # --- в проекты добавить поле при какой цене выводить сообщения
+    # ---- сообщения выводяться все но отсортированные по весу и по ценне, и есть подвал, там все что не прошли проверку в порядке убывания
+    #balans
+    #return
+    #тестируем новый функционал, расчет баланса
+
+
+
 
     begin
       Selenium::WebDriver::Chrome.driver_path = "C:/ruby/parsert/parsert/chromedriver.exe"
@@ -108,6 +125,7 @@ class ProjectsController < ApplicationController
       doc.xpath("/html/body/div/div/div/main/div/div/div/section/div/div/div/div/div/div/div/div").each do |anchor|
         @part << anchor
         @temp["open"] = false
+        @temp["mainproject"] =  BSON::ObjectId("#{params[:id]}")
         @temp["url"] = anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]/@href").first
         @temp["head"] = anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]/@title").first
         a = anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]//text()")
@@ -132,7 +150,17 @@ class ProjectsController < ApplicationController
 
     podrobno
 
+
+
+
   end
+
+
+  def balans
+    render plain: 'запускаем механизм подсчета веса объявления'
+    return
+  end
+
 
   def podrobno
 #1 отдельный процесс, нужно 2 раза открывать закрывать барузер

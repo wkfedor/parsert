@@ -12,4 +12,5 @@ class Message
   field :phone, type: String
   field :profile, type: String
   field :open, type: Boolean
+  field :mainproject, type: String
 end
