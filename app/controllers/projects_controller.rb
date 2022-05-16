@@ -122,7 +122,8 @@ class ProjectsController < ApplicationController
 
       doc = Nokogiri::HTML(@parser)
 
-      doc.xpath("/html/body/div/div/div/main/div/div/div/section/div/div/div/div/div/div/div/div").each do |anchor|
+      #doc.xpath("/html/body/div/div/div/main/div/div/div/section/div/div/div/div/div/div/div/div").each do |anchor|
+      doc.xpath(".//div[@data-test-component][@class]/div/span").each do |anchor|
         @part << anchor
         @temp["open"] = false
         @temp["mainproject"] =  BSON::ObjectId("#{params[:id]}")
