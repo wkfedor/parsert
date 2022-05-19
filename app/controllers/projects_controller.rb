@@ -80,7 +80,7 @@ class ProjectsController < ApplicationController
     @parser = ""
     @part = []
     @masslink = []
-    @temp = {}
+    
 
     #Project.find_by(_id:params[:id]).masslink.split(";").map(&:to_s) для каждого элемента вызываем to_s
     #Версия 96.0.4664.45  debian
@@ -125,24 +125,30 @@ class ProjectsController < ApplicationController
       #doc.xpath("/html/body/div/div/div/main/div/div/div/section/div/div/div/div/div/div/div/div").each do |anchor|
       doc.xpath(".//div[@data-test-component][@class]/div/span").each do |anchor|
         @part << anchor
-        @temp["open"] = false
-        @temp["mainproject"] =  BSON::ObjectId("#{params[:id]}")
-        @temp["url"] = anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]/@href").first
-        @temp["head"] = anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]/@title").first
+        @t = {}
+        @t["open"] = false
+        @t["mainproject"] = []
+        @t["mainproject"] << {:_id => BSON::ObjectId("#{params[:id]}")}
+      
+        
+        
+
+        @t["url"] = anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]/@href").first
+        @t["head"] = anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]/@title").first
         a = anchor.xpath(".//a[@target][@rel][@title][contains(@href, 'krasnoyarsk')]//text()")
 
         begin
-          @temp["pr"] = a[1].text.scan(/\w+/).join.to_i
+          @t["pr"] = a[1].text.scan(/\w+/).join.to_i
             #@masslink << a[1].text.scan(/\w+/).join.to_i
         rescue Exception
-          @temp["pr"] = -1
+          @t["pr"] = -1
         end
 
         #@masslink << (@temp["url"].to_s+@temp["head"].to_s+@temp["pr"].to_s)
 
-        if Message.where(url: @temp["url"]).first == nil
-          @t = Message.new(@temp)
-          @t.save
+        if Message.where(url: @t["url"]).first == nil
+          @tn = Message.new(@t)
+          @tn.save
         end
       end
     end
