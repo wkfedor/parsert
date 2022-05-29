@@ -179,16 +179,19 @@ class ProjectsController < ApplicationController
     Message.where({mainproject:{_id:BSON::ObjectId("#{a}")}}).each do |y|
     
      str=(y.head&.downcase&.to_s || "")+(y.text&.downcase&.to_s || "")
-
+     temp=temp+"----------"+str+"----------"+"\t\r\t\r"
+     ves=0
      massdictionars.each_with_index do |val, index|
       if str.include? val[0]
        puts "String includes 'cde'"
+       ves=ves+val[1]
+       temp=temp+"!!!!!"+val[0]+"!!!!!"+"\t\r"
       end
       #temp=temp+massdictionars[val[index]].to_s+"\t\r"
-     temp=temp+val[0]+"\t\r"
      end
-         
-     
+     y.update(ves: ves)
+     temp=temp+"----------ves="+ves.to_s+"----------"+"\t\r\t\r"
+     ves=0
     end 
 
     #render plain: 'запускаем механизм подсчета веса объявления'+ massdictionars.inspect

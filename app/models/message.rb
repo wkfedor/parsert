@@ -13,4 +13,5 @@ class Message
   field :profile, type: String
   field :open, type: Boolean
   field :mainproject, type: Array
+  field :ves, type: Integer 
 end
