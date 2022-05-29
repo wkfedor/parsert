@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
     def allmessages
-        @ms=Message.all
+        #@ms=Message.all.sort_by(&:ves)
+        @ms=Message.all.order('ves DESC')
     end
 
 

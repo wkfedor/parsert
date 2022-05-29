@@ -1,7 +1,18 @@
-<h3>messages</h3>
-<ul>
-<%=  @ms.each do |m| %>
-<li><%= m.head %></li>
-<% end %>
-
-</ul>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Заголовок</th>
+      <th>Текст</th>
+      <th>Вес</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%  @ms.each do |m| %>
+    <tr>
+        <td><%= m.head %></td>
+        <td><%= m.text %></td>
+        <td><%= m.ves %></td>
+    <tr>
+    <% end %>
+    </tbody>
+   </table>

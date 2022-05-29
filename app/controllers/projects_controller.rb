@@ -82,8 +82,7 @@ class ProjectsController < ApplicationController
     @masslink = []
     
 
-    balans params[:id]
-    return 
+
 
     #Project.find_by(_id:params[:id]).masslink.split(";").map(&:to_s) для каждого элемента вызываем to_s
     #Версия 96.0.4664.45  debian
@@ -160,43 +159,40 @@ class ProjectsController < ApplicationController
 
     podrobno
 
-
+    balans params[:id]
+     
 
 
   end
 
 
   def balans a
-
     temp=''
-
     massdictionars={}
     Project.find_by(_id:a).dictionars.each do |x| #перебираем все словари в проекте
     dictionars = Dictionar.find_by(x)
     massdictionars[dictionars.word]=dictionars.ves
     end
-    
+
     Message.where({mainproject:{_id:BSON::ObjectId("#{a}")}}).each do |y|
-    
      str=(y.head&.downcase&.to_s || "")+(y.text&.downcase&.to_s || "")
-     temp=temp+"----------"+str+"----------"+"\t\r\t\r"
+     #temp=temp+"----------"+str+"----------"+"\t\r\t\r"
      ves=0
      massdictionars.each_with_index do |val, index|
       if str.include? val[0]
-       puts "String includes 'cde'"
+      # puts "String includes 'cde'"
        ves=ves+val[1]
-       temp=temp+"!!!!!"+val[0]+"!!!!!"+"\t\r"
+      # temp=temp+"!!!!!"+val[0]+"!!!!!"+"\t\r"
       end
       #temp=temp+massdictionars[val[index]].to_s+"\t\r"
      end
      y.update(ves: ves)
-     temp=temp+"----------ves="+ves.to_s+"----------"+"\t\r\t\r"
+     #temp=temp+"----------ves="+ves.to_s+"----------"+"\t\r\t\r"
      ves=0
     end 
-
     #render plain: 'запускаем механизм подсчета веса объявления'+ massdictionars.inspect
-    render plain: 'запускаем механизм подсчета веса объявления'+ temp
-    return
+    #render plain: 'запускаем механизм подсчета веса объявления'+ temp
+    #return
   end
 
 
