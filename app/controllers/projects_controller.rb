@@ -6,7 +6,8 @@ class ProjectsController < ApplicationController
 
   def index
     @msql = Project.all
-    @msqld = Dictionar.all
+    @msqld = Dictionar.all.order('ves ASC')
+    #@ms=Message.all.order('ves DESC')
     #params="61de8e938040180b24f74142"
     #render plain: Project.find_by(_id:params)
 
@@ -100,8 +101,8 @@ class ProjectsController < ApplicationController
     #return
     #тестируем новый функционал, расчет баланса
 
-
-
+    balans params[:id]
+    return  
 
     begin
       Selenium::WebDriver::Chrome.driver_path = "C:/ruby/parsert/parsert/chromedriver.exe"
@@ -159,7 +160,7 @@ class ProjectsController < ApplicationController
 
     podrobno
 
-    balans params[:id]
+    #balans params[:id]
      
 
 
@@ -179,12 +180,12 @@ class ProjectsController < ApplicationController
      #temp=temp+"----------"+str+"----------"+"\t\r\t\r"
      ves=0
      massdictionars.each_with_index do |val, index|
-      if str.include? val[0]
+      if str.include? val[0].downcase
       # puts "String includes 'cde'"
        ves=ves+val[1]
-      # temp=temp+"!!!!!"+val[0]+"!!!!!"+"\t\r"
+       #temp=temp+"!!!!!"+val[0]+"!!!!!"+"\t\r"
       end
-      #temp=temp+massdictionars[val[index]].to_s+"\t\r"
+      temp=temp+massdictionars[val[index]].to_s+"\t\r"
      end
      y.update(ves: ves)
      #temp=temp+"----------ves="+ves.to_s+"----------"+"\t\r\t\r"
