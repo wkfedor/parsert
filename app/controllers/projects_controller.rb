@@ -6,9 +6,15 @@ class ProjectsController < ApplicationController
 
   def index
     @msql = Project.all
-    @msqld = Dictionar.all.order('ves ASC')
-    #@ms=Message.all.order('ves DESC')
-    #params="61de8e938040180b24f74142"
+    @msqld = Dictionar.order('ves DESC').all
+    
+    #@msqld = Project.find_by(_id: params[:id])
+    #render plain:@msqld
+    #return
+    
+    
+
+
     #render plain: Project.find_by(_id:params)
 
     #db.projects.find({_id:ObjectId("61de8e938040180b24f74142")})

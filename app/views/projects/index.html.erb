@@ -20,19 +20,19 @@
 
         <td ><%= m.name %></td>
         <td>
-          <% m.dictionars.each do |a|  %>
-            <% a["_id"] %>
+
 
             <% @msqld.each do |b|%>
 
-              <% if b.id == a["_id"] %>
+              
+                
                 <span class="border border-primary"><%= b.ves %></span>
                 <span class="border border-success"><%= b.word %></span>
                 <span class="border border-info"><%= b.comment %></span>
                 <br/>
-              <% end %>
+              
             <% end %>
-          <% end %>
+          
         </td>
         <td>
 
