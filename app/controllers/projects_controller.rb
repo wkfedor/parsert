@@ -6,11 +6,34 @@ class ProjectsController < ApplicationController
 
   def index
     @msql = Project.all
-    @msqld = Dictionar.order('ves DESC').all
+    #@msqld = Project.includes(:dictionars).all# 
+    #@msqld =Dictionar.order('ves DESC').all
+    @msqld =Project.find_by(_id:"626aa31f87828206f442172b").dictionar
+
+    #{"_id"=>BSON::ObjectId('61dea70a8040180b24f74143')}, 
+    #{"_id"=>BSON::ObjectId('61deab6d8040180b24f7414d')}, 
+    #{"_id"=>BSON::ObjectId('61dff54580401845a10071c6')}
     
+   
+    @masdic_=['61dea70a8040180b24f74143','61deab6d8040180b24f7414d','61dff54580401845a10071c6']
+    @masdic1='61dff58380401845a10071c7'
+    @msqld =Dictionar.find(_id: @masdic1)
+    #@ms =Dictionar
+    @ms =Dictionar.find({:_id=>{:$in=>[BSON::ObjectId('61dea70a8040180b24f74143'), BSON::ObjectId('61deab6d8040180b24f7414d')]}})
+     
+    #@msqld =Dictionar.indictinary     
+    
+    #Book.preload(:author).limit(10)
+    #render plain: @ms.join(', ').inspect
+    render plain: @ms.methods
+    return 
+    #@msqld =[]
+    #@msqld = Project.all
+
     #@msqld = Project.find_by(_id: params[:id])
-    #render plain:@msqld
-    #return
+
+   #Customer.includes(:orders, :reviews)    
+  
     
     
 

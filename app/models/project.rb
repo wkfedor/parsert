@@ -6,10 +6,10 @@ class Project
   field :name, type: String
   field :work, type: String
   field :masslink, type: String
-  field :dictionars, type: Array
+  field :dictionar, type: Array
 
-
+  
   #has_and_belongs_to_many :dictionars
-  #has_many :dictionar
+  #belongs_to :dictionar
 end
 
