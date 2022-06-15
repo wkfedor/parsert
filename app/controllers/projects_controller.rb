@@ -6,41 +6,23 @@ class ProjectsController < ApplicationController
 
   def index
     @msql = Project.all
+    @msql.each do |x|   #перебираем проекты
+      temp=""
+      @msqld=[]
+      x.dictionar.each do |y| #перебираем по 1 проекту его словари 
+       # по id запрашиваем данные в словарях 
+       #@m=Dictionar.find({:id=>{:$in=>[BSON::ObjectId('61dea70a8040180b24f74143'), BSON::ObjectId('61deab6d8040180b24f7414d')]}}, { _id: 0, name: 1 })   
+       #temp=temp+y["_id"]+"   "
+      m = Dictionar.find({:_id => BSON::ObjectId(y["_id"])}) 
+      temp=temp+m.inspect
+      @msqld   << m
+      end
+      #render plain: @msqld 
+      #return
+    end
     #@msqld = Project.includes(:dictionars).all# 
     #@msqld =Dictionar.order('ves DESC').all
-    @msqld =Project.find_by(_id:"626aa31f87828206f442172b").dictionar
-
-    #{"_id"=>BSON::ObjectId('61dea70a8040180b24f74143')}, 
-    #{"_id"=>BSON::ObjectId('61deab6d8040180b24f7414d')}, 
-    #{"_id"=>BSON::ObjectId('61dff54580401845a10071c6')}
-    
-   
-    @masdic_=['61dea70a8040180b24f74143','61deab6d8040180b24f7414d','61dff54580401845a10071c6']
-    @masdic1='61dff58380401845a10071c7'
-    @msqld =Dictionar.find(_id: @masdic1)
-    #@ms =Dictionar
-    @ms =Dictionar.find({:_id=>{:$in=>[BSON::ObjectId('61dea70a8040180b24f74143'), BSON::ObjectId('61deab6d8040180b24f7414d')]}})
-     
-    #@msqld =Dictionar.indictinary     
-    
-    #Book.preload(:author).limit(10)
-    #render plain: @ms.join(', ').inspect
-    render plain: @ms.methods
-    return 
-    #@msqld =[]
-    #@msqld = Project.all
-
-    #@msqld = Project.find_by(_id: params[:id])
-
-   #Customer.includes(:orders, :reviews)    
-  
-    
-    
-
-
-    #render plain: Project.find_by(_id:params)
-
-    #db.projects.find({_id:ObjectId("61de8e938040180b24f74142")})
+    #@m=Dictionar.find({:id=>{:$in=>[BSON::ObjectId('61dea70a8040180b24f74143'), BSON::ObjectId('61deab6d8040180b24f7414d')]}}, { _id: 0, name: 1 })   
   end
 
   def edit

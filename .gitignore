@@ -3,3 +3,5 @@ log/development.log
 tmp/pids/server.pid
 log/development.log
 log/development.log
+tmp/pids/server.pid
+log/development.log
