@@ -15,11 +15,13 @@ class ProjectsController < ApplicationController
        #temp=temp+y["_id"]+"   "
       m = Dictionar.find({:_id => BSON::ObjectId(y["_id"])}) 
       temp=temp+m.inspect
-      @msqld   << m
+      @msqld   << [m["ves"], m["word"],  m["comment"] ]
       end
-      #render plain: @msqld 
-      #return
     end
+   
+    @msqld=@msqld.sort{|a,b| a[0] <=> b[0]}.reverse
+    #render plain:  @msqld.inspect 
+    #return
     #@msqld = Project.includes(:dictionars).all# 
     #@msqld =Dictionar.order('ves DESC').all
     #@m=Dictionar.find({:id=>{:$in=>[BSON::ObjectId('61dea70a8040180b24f74143'), BSON::ObjectId('61deab6d8040180b24f7414d')]}}, { _id: 0, name: 1 })   
