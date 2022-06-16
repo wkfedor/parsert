@@ -10,6 +10,9 @@ class ProjectsController < ApplicationController
       temp=""
       @msqld=[]
       x.dictionar.each do |y| #перебираем по 1 проекту его словари 
+
+       #render plain:  y.inspect 
+       #return
        # по id запрашиваем данные в словарях 
        #@m=Dictionar.find({:id=>{:$in=>[BSON::ObjectId('61dea70a8040180b24f74143'), BSON::ObjectId('61deab6d8040180b24f7414d')]}}, { _id: 0, name: 1 })   
        #temp=temp+y["_id"]+"   "
@@ -19,10 +22,9 @@ class ProjectsController < ApplicationController
       end
     end
    
-    @msqld=@msqld.sort{|a,b| a[0] <=> b[0]}.reverse
+    @msqld=@msqld.sort!{|a,b| a[0] <=> b[0]}
     #render plain:  @msqld.inspect 
-    #return
-    #@msqld = Project.includes(:dictionars).all# 
+    #return 
     #@msqld =Dictionar.order('ves DESC').all
     #@m=Dictionar.find({:id=>{:$in=>[BSON::ObjectId('61dea70a8040180b24f74143'), BSON::ObjectId('61deab6d8040180b24f7414d')]}}, { _id: 0, name: 1 })   
   end
@@ -32,7 +34,7 @@ class ProjectsController < ApplicationController
     @project = Project.find_by(_id: params[:id])
 
     @a = []
-    @project.dictionars.each do |y| # в переменной @a массив id словарей которые есть в проекте
+    @project.dictionar.each do |y| # в переменной @a массив id словарей которые есть в проекте
       @a << "#{y["_id"]}"
     end
 
@@ -47,14 +49,14 @@ class ProjectsController < ApplicationController
 
   def update
     @temp = {}
-    @temp["dictionars"] = []
+    @temp["dictionar"] = []
     @project = Project.find_by(_id: params[:id])
     @project.update(project_params)
 
     #@project.update(project_params2)
 
     project_params2.each do |x|
-      @temp["dictionars"] << {:_id => BSON::ObjectId("#{x}")}
+      @temp["dictionar"] << {:_id => BSON::ObjectId("#{x}")}
     end
 
     #render plain:  @temp.inspect
@@ -67,9 +69,9 @@ class ProjectsController < ApplicationController
 
   def create
     @temp = {}
-    @temp["dictionars"] = []
+    @temp["dictionar"] = []
     project_params2.each do |x|
-      @temp["dictionars"] << {:_id => BSON::ObjectId("#{x}")}
+      @temp["dictionar"] << {:_id => BSON::ObjectId("#{x}")}
     end
     @temp["name"] = project_params["name"]
     @temp["masslink"] = project_params["masslink"]
@@ -250,7 +252,7 @@ class ProjectsController < ApplicationController
 
   private def project_params2
     begin # аналог try catch
-      params.require(:dictionars) # аналог try catch
+      params.require(:dictionar) # аналог try catch
     rescue Exception # аналог try catch
       ["6268c61f80401826b7a04038"] # аналог try catch
     end # аналог try catch

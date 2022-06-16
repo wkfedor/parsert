@@ -47,7 +47,7 @@
       <% @msqld.each do |x| %>
 
           <button type="button" id=<%= "move_#{x.id}"%> name=<%= "#{x.id}"%> >  <%= x.comment %>||<%= x.ves %>||<%= x.word %></button>
-          <input type="hidden" id=<%= "#{x.id}"%>  name=dictionars[] value=<%= "#{x.id}"%>>
+          <input type="hidden" id=<%= "#{x.id}"%>  name=dictionar[] value=<%= "#{x.id}"%>>
 
 
       <% end %>
