@@ -5,24 +5,39 @@ class ProjectsController < ApplicationController
   require 'open_uri_redirections'
 
   def index
-    @msql = Project.all
+    @msql = Project.all.order('created_at ASC')
+    @data={}
     @msql.each do |x|   #перебираем проекты
-      temp=""
-      @msqld=[]
-      x.dictionar.each do |y| #перебираем по 1 проекту его словари 
-
-       #render plain:  y.inspect 
+      
+    temp=""
+    @msqld=[]
+    x.dictionar.each do |y| #перебираем по 1 проекту его словари 
+       #render plain:  y["_id"]
        #return
        # по id запрашиваем данные в словарях 
        #@m=Dictionar.find({:id=>{:$in=>[BSON::ObjectId('61dea70a8040180b24f74143'), BSON::ObjectId('61deab6d8040180b24f7414d')]}}, { _id: 0, name: 1 })   
        #temp=temp+y["_id"]+"   "
-      m = Dictionar.find({:_id => BSON::ObjectId(y["_id"])}) 
-      temp=temp+m.inspect
-      @msqld   << [m["ves"], m["word"],  m["comment"] ]
+       #добавь обработку исключения
+        begin
+        m = Dictionar.find({:_id => BSON::ObjectId(y["_id"])}) 
+        @msqld   << [m["ves"], m["word"],  m["comment"] ]
+        rescue 
+        @msqld   << ["не найдено", "не найдено",  "не найдено" ]  
+        end
       end
-    end
+        
+        
+
+        #@data[x["_id"].to_s]
+        @msqld=@msqld.sort!{|a,b| a[0] <=> b[0]}
+        @data[x["_id"].to_s]=@msqld
+      end
    
-    @msqld=@msqld.sort!{|a,b| a[0] <=> b[0]}
+ 
+        #render plain: @data.inspect
+        #return
+
+    
     #render plain:  @msqld.inspect 
     #return 
     #@msqld =Dictionar.order('ves DESC').all
