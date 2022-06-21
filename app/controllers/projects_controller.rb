@@ -131,8 +131,8 @@ class ProjectsController < ApplicationController
     #return
     #тестируем новый функционал, расчет баланса
 
-    balans params[:id]
-    return  
+    #balans params[:id]
+    #return  
 
     begin
       Selenium::WebDriver::Chrome.driver_path = "C:/ruby/parsert/parsert/chromedriver.exe"
@@ -190,7 +190,7 @@ class ProjectsController < ApplicationController
 
     podrobno
 
-    #balans params[:id]
+    balans params[:id]
      
 
 
@@ -200,7 +200,7 @@ class ProjectsController < ApplicationController
   def balans a
     temp=''
     massdictionars={}
-    Project.find_by(_id:a).dictionars.each do |x| #перебираем все словари в проекте
+    Project.find_by(_id:a).dictionar.each do |x| #перебираем все словари в проекте
     dictionars = Dictionar.find_by(x)
     massdictionars[dictionars.word]=dictionars.ves
     end
