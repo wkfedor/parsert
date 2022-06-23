@@ -66,7 +66,12 @@ class ProjectsController < ApplicationController
     @temp = {}
     @temp["dictionar"] = []
     @project = Project.find_by(_id: params[:id])
+
+
     @project.update(project_params)
+
+        #render plain: @project.inspect
+        #return
 
     #@project.update(project_params2)
 
@@ -75,7 +80,7 @@ class ProjectsController < ApplicationController
     end
 
     #render plain:  @temp.inspect
-    @temp = Project.update(@temp)
+    @temp = @project.update(@temp)
     #@temp.save
     #puts params.require(:project).inspect
     redirect_to action: :index
@@ -91,6 +96,7 @@ class ProjectsController < ApplicationController
     @temp["name"] = project_params["name"]
     @temp["masslink"] = project_params["masslink"]
     @temp["work"] = project_params["work"]
+    @temp["priсe"] = project_params["priсe"]
     #render plain: @temp   # вывести содержимое на экран не используя вьюху
 
     @temp = Project.new(@temp)
@@ -261,7 +267,7 @@ class ProjectsController < ApplicationController
 
 
   private def project_params
-    params.require(:project).permit(:name, :masslink, :work)
+    params.require(:project).permit(:name, :masslink, :work,:priсe)
 
   end
 

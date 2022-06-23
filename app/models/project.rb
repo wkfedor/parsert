@@ -7,7 +7,7 @@ class Project
   field :work, type: String
   field :masslink, type: String
   field :dictionar, type: Array
-
+  field :priсe, type: Integer
   
   #has_and_belongs_to_many :dictionars
   #belongs_to :dictionar
