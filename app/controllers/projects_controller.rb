@@ -141,7 +141,7 @@ class ProjectsController < ApplicationController
     #return  
 
     begin
-      Selenium::WebDriver::Chrome.driver_path = "C:/ruby/parsert/parsert/chromedriver.exe"
+      Selenium::WebDriver::Chrome.driver_path = Rails.root.to_s+"/chromedriver.exe"
     rescue Exception
       Selenium::WebDriver::Chrome.driver_path = Rails.root.to_s+"/chromedriver"
     end
@@ -238,7 +238,7 @@ class ProjectsController < ApplicationController
 #2 из плюсов сейчас удобно будет отлаживать
 #3 постораться переделать парсер так что бы браузер открывался 1 раз в процессе работы
     begin
-      Selenium::WebDriver::Chrome.driver_path = "C:/ruby/parsert/parsert/chromedriver.exe"
+      Selenium::WebDriver::Chrome.driver_path = Rails.root.to_s+"/chromedriver.exe"
     rescue Exception
       Selenium::WebDriver::Chrome.driver_path = Rails.root.to_s+"/chromedriver"
     end
