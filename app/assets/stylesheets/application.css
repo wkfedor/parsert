@@ -13,6 +13,12 @@
  *= require_tree .
  *= require_self
  */
+.bg-light {
+    --bs-bg-opacity: 0;
+    font-size: 12pt;
+    font-weight: 600;
+}
+
 header {
     color: #F0F0F0;
     background: #C52F24;
