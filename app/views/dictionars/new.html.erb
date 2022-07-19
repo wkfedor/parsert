@@ -22,6 +22,12 @@
 <%= f.text_field :comment %>
 </p>
 
+<p>
+Проекты<br/>
+<%= f.select :projects, @mas,{ :prompt => "Выберите проекты"},
+             { :multiple => true, :size => 5 } %>
+</p>
+
 
 <%= f.submit "Отправить" %>
 </p>

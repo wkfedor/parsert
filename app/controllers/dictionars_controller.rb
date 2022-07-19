@@ -12,6 +12,10 @@ class DictionarsController < ApplicationController
     end
 
     def new
+    @mas=[]
+    @mas << ["Все",-1]
+    @progect=Project.all.order('created_at ASC')
+    @progect.each {|x| @mas << [x.name,x._id] }
 
     end
 
