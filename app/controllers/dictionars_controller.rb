@@ -46,6 +46,6 @@ class DictionarsController < ApplicationController
     end
 
     private def dictionar_params
-    params.require(:dictionar).permit(:ves, :word, :comment, :project)
+    params.require(:dictionar).permit(:ves, :word, :comment, :dproject => [])
     end
 end
