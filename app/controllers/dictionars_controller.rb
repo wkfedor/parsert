@@ -13,7 +13,7 @@ class DictionarsController < ApplicationController
 
     def new
     @mas=[]
-    @mas << ["Все",-1]
+    #@mas << ["Все",-1]
     @progect=Project.all.order('created_at ASC')
     @progect.each {|x| @mas << [x.name,x._id] }
 
@@ -26,6 +26,8 @@ class DictionarsController < ApplicationController
     end
 
     def destroy
+        #render plain: "destroy"
+        #return
         @msql=Dictionar.find_by(_id:params[:id])
         @msql.delete
         redirect_to action: :index
@@ -35,6 +37,19 @@ class DictionarsController < ApplicationController
 
     def edit
     @msql=Dictionar.find_by(_id:params[:id])
+    @y=[]
+    @progect=Project.all.order('created_at ASC')
+    @progect.each {|x| @y << [x.name,x._id] }
+=begin
+    @msql.dproject.map do |x|
+         @y << ["Все",x] if x.to_i==-1
+         @y << ["Выберите элементы",x] if x.to_s==""
+         @y << [x,x] if x.to_s!=""
+    end
+=end
+
+    #render plain:
+    # return
     end
 
 

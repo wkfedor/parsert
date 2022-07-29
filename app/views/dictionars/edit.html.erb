@@ -26,7 +26,8 @@
 
         <p>
           Проекты<br/>
-          <%= f.select :dproject, [["Berlin", "BE"], ["Chicago", "CHI"], ["Madrid", "MD"]]  %>
+          <%= f.select :dproject, @y,{ :prompt => "Выберите проекты"},
+                       { :multiple => true, :size => 5 }  %>
         </p>
 
         <%= f.submit "Отправить" %>
